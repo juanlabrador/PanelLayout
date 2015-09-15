@@ -179,7 +179,74 @@ public class GroupLayout extends LinearLayout {
         return (TextLayout) mItemContent.getChildAt(index);
     }
 
-    // Group Layout
+    /**-------------------------------------------------------------------------*/
+    /**------------------------EDIT TEXT LAYOUT---------------------------------*/
+
+    public EditTextLayout addEditTextLayout(String label, String content) {
+        EditTextLayout mEditTextLayout = new EditTextLayout(mContext);
+        mEditTextLayout.setLabel(label);
+        mEditTextLayout.setContent(content);
+        mEditTextLayout.setLabelColor(mDefaultLabelTextColor);
+        mEditTextLayout.setContentColor(mDefaultContentTextColor);
+        mEditTextLayout.setColorSeparator(mDefaultSeparatorColor);
+        mEditTextLayout.setTextSize(mDefaultTextSize);
+
+        identifyObject();
+        addField(mEditTextLayout);
+
+        return mEditTextLayout;
+    }
+
+    public EditTextLayout addEditTextLayout(String label) {
+        EditTextLayout mEditTextLayout = new EditTextLayout(mContext);
+        mEditTextLayout.setLabel(label);
+        mEditTextLayout.setLabelColor(mDefaultLabelTextColor);
+        mEditTextLayout.setContentColor(mDefaultContentTextColor);
+        mEditTextLayout.setColorSeparator(mDefaultSeparatorColor);
+        mEditTextLayout.setTextSize(mDefaultTextSize);
+
+        identifyObject();
+        addField(mEditTextLayout);
+
+        return mEditTextLayout;
+    }
+
+    public EditTextLayout addEditTextLayout(int label, String content) {
+        EditTextLayout mEditTextLayout = new EditTextLayout(mContext);
+        mEditTextLayout.setLabel(label);
+        mEditTextLayout.setContent(content);
+        mEditTextLayout.setLabelColor(mDefaultLabelTextColor);
+        mEditTextLayout.setContentColor(mDefaultContentTextColor);
+        mEditTextLayout.setColorSeparator(mDefaultSeparatorColor);
+        mEditTextLayout.setTextSize(mDefaultTextSize);
+
+        identifyObject();
+        addField(mEditTextLayout);
+
+        return mEditTextLayout;
+    }
+
+    public EditTextLayout addEditTextLayout(int label) {
+        EditTextLayout mEditTextLayout = new EditTextLayout(mContext);
+        mEditTextLayout.setLabel(label);
+        mEditTextLayout.setLabelColor(mDefaultLabelTextColor);
+        mEditTextLayout.setContentColor(mDefaultContentTextColor);
+        mEditTextLayout.setColorSeparator(mDefaultSeparatorColor);
+        mEditTextLayout.setTextSize(mDefaultTextSize);
+
+        identifyObject();
+        addField(mEditTextLayout);
+
+        return mEditTextLayout;
+    }
+
+    public EditTextLayout getEditTextLayoutAt(int index) {
+        return (EditTextLayout) mItemContent.getChildAt(index);
+    }
+
+    /**-------------------------------------------------------------------------*/
+    /**------------------------GROUP LAYOUT---------------------------------*/
+
 
     public View getLastField() {
         View view = null;
@@ -194,6 +261,8 @@ public class GroupLayout extends LinearLayout {
             mItemContent.setVisibility(View.VISIBLE);
         } else if (getLastField() instanceof TextLayout) {
             ((TextLayout) getLastField()).showSeparator();
+        } else if (getLastField() instanceof EditTextLayout) {
+            ((EditTextLayout) getLastField()).showSeparator();
         }
     }
 
