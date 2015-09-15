@@ -22,4 +22,5 @@ android {
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     compile project(':panellayout')
+    compile 'com.github.juanlabrador.hmenu:hmenu:1.0'
 }
