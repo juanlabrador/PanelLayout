@@ -12,6 +12,7 @@ public class MainActivity extends Activity {
 
     private GroupLayout mGroupLayout;
     private TextLayout mName;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,7 +26,7 @@ public class MainActivity extends Activity {
         mGroupLayout.addTextLayout("Age", "23");
         mGroupLayout.addTextLayout("Develop by", "Juan Labrador");
 
-        //mName.setLabel("Last Name");
-        //mName.setContent("Labrador");
+        mName.setLabel("Last Name");
+        mName.setContent("Labrador");
     }
 }
