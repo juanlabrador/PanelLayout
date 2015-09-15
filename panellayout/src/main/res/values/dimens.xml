@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="size_text">14sp</dimen>
+    <dimen name="padding_left">12dp</dimen>
+    <dimen name="padding_right">12dp</dimen>
+    <dimen name="padding_bottom">8dp</dimen>
+    <dimen name="padding_top">8dp</dimen>
+    <dimen name="padding_internal_left">5dp</dimen>
+    <dimen name="padding_internal_right">5dp</dimen>
+    <dimen name="padding_internal_top">5dp</dimen>
+    <dimen name="padding_internal_bottom">5dp</dimen>
+    <dimen name="size_icon">22dp</dimen>
+    
+    <dimen name="padding_internal_vertical">1dp</dimen>
+
+</resources>

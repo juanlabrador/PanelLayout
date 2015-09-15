@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="GroupLayoutAttrs">
+        <attr name="backgroundColor" format="color"/>
+        <attr name="backgroundBorderColor" format="color"/>
+        <attr name="labelTextColor" format="color"/>
+        <attr name="contentTextColor" format="color"/>
+        <attr name="separatorColor" format="color"/>
+        <attr name="textSizeLayout" format="dimension"/>
+        <attr name="withBorder" format="boolean"/>
+    </declare-styleable>
+
+</resources>
