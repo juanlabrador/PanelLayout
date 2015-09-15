@@ -26,7 +26,7 @@ public class GroupLayout extends LinearLayout {
     private int mDefaultBackgroundBorderColor = Color.TRANSPARENT;
     private int mDefaultBackgroundColor = Color.WHITE;
     private int mDefaultSeparatorColor = Color.LTGRAY;
-    private boolean mDefaultBorder = false;
+    private boolean mDefaultBorder = true;
     private int mDefaultCornerRadius = 12;
 
     // Text Attributes
