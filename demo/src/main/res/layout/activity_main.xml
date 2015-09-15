@@ -14,7 +14,6 @@
         android:id="@+id/group"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        panel:textSizeLayout="16sp"
-        panel:withBorder="true"/>
+        panel:textSizeLayout="16sp"/>
 
 </RelativeLayout>

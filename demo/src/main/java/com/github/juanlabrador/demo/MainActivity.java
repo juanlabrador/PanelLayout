@@ -24,7 +24,7 @@ public class MainActivity extends Activity {
         mGroupLayout = (GroupLayout) findViewById(R.id.group);
         mName = mGroupLayout.addTextLayout("Name", "Juan Labrador");
         mGroupLayout.addTextLayout("Age", "23");
-        mGroupLayout.addTextLayout("Develop by", "Juan Labrador");
+        mGroupLayout.addTextLayout("Developed by", "Juan Labrador");
 
         mName.setLabel("Last Name");
         mName.setContent("Labrador");
