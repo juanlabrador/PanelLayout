@@ -32,6 +32,7 @@ public class MainActivity extends Activity {
         mGroupLayout2 = (GroupLayout) findViewById(R.id.group2);
         mGroupLayout2.addEditTextLayout("Username");
         mPassword = mGroupLayout2.addEditTextLayout("Password");
-        mPassword.isPassword(true);
+        //mPassword.isPassword(true);
+        //mPassword.isNumber(true);
     }
 }

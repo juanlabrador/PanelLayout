@@ -92,6 +92,20 @@ public class EditTextLayout extends LinearLayout implements View.OnFocusChangeLi
             mContent.setInputType(InputType.TYPE_CLASS_TEXT);
     }
 
+    public void isNumber(boolean b) {
+        if (b)
+            mContent.setInputType(InputType.TYPE_CLASS_NUMBER);
+        else
+            mContent.setInputType(InputType.TYPE_CLASS_TEXT);
+    }
+
+    public void isEmail(boolean b) {
+        if (b)
+            mContent.setInputType(InputType.TYPE_TEXT_VARIATION_EMAIL_ADDRESS);
+        else
+            mContent.setInputType(InputType.TYPE_CLASS_TEXT);
+    }
+
     public EditText getEditText() {
         return mContent;
     }
