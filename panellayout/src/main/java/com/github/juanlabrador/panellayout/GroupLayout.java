@@ -236,7 +236,7 @@ public class GroupLayout extends LinearLayout {
         return mEditTextLayout;
     }
 
-    /**-------------------------------------------------------------------------*/
+    /**--------------------------------------------------------------------------*/
     /**------------------------MULTI TEXT LAYOUT---------------------------------*/
 
 
@@ -266,6 +266,76 @@ public class GroupLayout extends LinearLayout {
         return mMultiTextLayout;
     }
 
+    /**-------------------------------------------------------------------------------*/
+    /**------------------------MULTI EDIT TEXT LAYOUT---------------------------------*/
+
+    public MultiEditTextLayout addMultiEditTextLayout(int hint) {
+        MultiEditTextLayout mMultiEditTextLayout = new MultiEditTextLayout(mContext);
+        mMultiEditTextLayout.setHint(hint);
+        mMultiEditTextLayout.setContentColor(mDefaultLabelTextColor);
+        mMultiEditTextLayout.setColorSeparator(mDefaultSeparatorColor);
+        mMultiEditTextLayout.setTextSize(mDefaultTextSize);
+
+        identifyObject();
+        addField(mMultiEditTextLayout);
+
+        return mMultiEditTextLayout;
+    }
+
+    public MultiEditTextLayout addMultiEditTextLayout(String hint) {
+        MultiEditTextLayout mMultiEditTextLayout = new MultiEditTextLayout(mContext);
+        mMultiEditTextLayout.setHint(hint);
+        mMultiEditTextLayout.setContentColor(mDefaultLabelTextColor);
+        mMultiEditTextLayout.setColorSeparator(mDefaultSeparatorColor);
+        mMultiEditTextLayout.setTextSize(mDefaultTextSize);
+
+        identifyObject();
+        addField(mMultiEditTextLayout);
+
+        return mMultiEditTextLayout;
+    }
+
+    public MultiEditTextLayout addMultiEditTextLayout(int hint, int content) {
+        MultiEditTextLayout mMultiEditTextLayout = new MultiEditTextLayout(mContext);
+        mMultiEditTextLayout.setHint(hint);
+        mMultiEditTextLayout.setContent(content);
+        mMultiEditTextLayout.setContentColor(mDefaultLabelTextColor);
+        mMultiEditTextLayout.setColorSeparator(mDefaultSeparatorColor);
+        mMultiEditTextLayout.setTextSize(mDefaultTextSize);
+
+        identifyObject();
+        addField(mMultiEditTextLayout);
+
+        return mMultiEditTextLayout;
+    }
+
+    public MultiEditTextLayout addMultiEditTextLayout(String hint, int content) {
+        MultiEditTextLayout mMultiEditTextLayout = new MultiEditTextLayout(mContext);
+        mMultiEditTextLayout.setHint(hint);
+        mMultiEditTextLayout.setContent(content);
+        mMultiEditTextLayout.setContentColor(mDefaultLabelTextColor);
+        mMultiEditTextLayout.setColorSeparator(mDefaultSeparatorColor);
+        mMultiEditTextLayout.setTextSize(mDefaultTextSize);
+
+        identifyObject();
+        addField(mMultiEditTextLayout);
+
+        return mMultiEditTextLayout;
+    }
+
+    public MultiEditTextLayout addMultiEditTextLayout(int hint, String content) {
+        MultiEditTextLayout mMultiEditTextLayout = new MultiEditTextLayout(mContext);
+        mMultiEditTextLayout.setHint(hint);
+        mMultiEditTextLayout.setContent(content);
+        mMultiEditTextLayout.setContentColor(mDefaultLabelTextColor);
+        mMultiEditTextLayout.setColorSeparator(mDefaultSeparatorColor);
+        mMultiEditTextLayout.setTextSize(mDefaultTextSize);
+
+        identifyObject();
+        addField(mMultiEditTextLayout);
+
+        return mMultiEditTextLayout;
+    }
 
     /**-------------------------------------------------------------------------*/
     /**------------------------GROUP LAYOUT---------------------------------*/
@@ -288,6 +358,8 @@ public class GroupLayout extends LinearLayout {
             ((EditTextLayout) getLastField()).showSeparator();
         } else if (getLastField() instanceof MultiTextLayout) {
             ((MultiTextLayout) getLastField()).showSeparator();
+        } else if (getLastField() instanceof MultiEditTextLayout) {
+            ((MultiEditTextLayout) getLastField()).showSeparator();
         }
     }
 
