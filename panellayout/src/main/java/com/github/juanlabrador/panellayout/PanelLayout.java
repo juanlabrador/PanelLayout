@@ -9,6 +9,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.LinearLayout;
 
+import java.util.ArrayList;
+
 /**
  * Created by juanlabrador on 15/09/15.
  */
@@ -34,6 +36,10 @@ public class PanelLayout extends LinearLayout {
     private int mDefaultLabelTextColor = Color.BLACK;
     private int mDefaultContentTextColor = Color.GRAY;
     private int mDefaultTextSize = 14;
+
+    // Popup icon
+    public static final int GRAY = R.drawable.next_gray;
+    public static final int BLACK = R.drawable.next_black;
 
 
     public PanelLayout(Context context, AttributeSet attrs) {
@@ -338,7 +344,275 @@ public class PanelLayout extends LinearLayout {
     }
 
     /**-------------------------------------------------------------------------*/
-    /**------------------------GROUP LAYOUT---------------------------------*/
+    /**------------------------POPUP LAYOUT-------------------------------------*/
+
+    public PopupLayout addPopupLayout(String label, String content, int menu) {
+        PopupLayout mPopupLayout = new PopupLayout(mContext);
+        mPopupLayout.setLabel(label);
+        mPopupLayout.setContent(content);
+        mPopupLayout.setMenu(menu);
+        mPopupLayout.setIcon(GRAY);
+        mPopupLayout.setLabelColor(mDefaultLabelTextColor);
+        mPopupLayout.setContentColor(mDefaultContentTextColor);
+        mPopupLayout.setColorSeparator(mDefaultSeparatorColor);
+        mPopupLayout.setTextSize(mDefaultTextSize);
+
+        identifyObject();
+        addField(mPopupLayout);
+
+        return mPopupLayout;
+    }
+
+    public PopupLayout addPopupLayout(String label, String content, int menu, int icon) {
+        PopupLayout mPopupLayout = new PopupLayout(mContext);
+        mPopupLayout.setLabel(label);
+        mPopupLayout.setContent(content);
+        mPopupLayout.setIcon(icon);
+        mPopupLayout.setMenu(menu);
+        mPopupLayout.setLabelColor(mDefaultLabelTextColor);
+        mPopupLayout.setContentColor(mDefaultContentTextColor);
+        mPopupLayout.setColorSeparator(mDefaultSeparatorColor);
+        mPopupLayout.setTextSize(mDefaultTextSize);
+
+        identifyObject();
+        addField(mPopupLayout);
+
+        return mPopupLayout;
+    }
+
+    public PopupLayout addPopupLayout(String label, int menu) {
+        PopupLayout mPopupLayout = new PopupLayout(mContext);
+        mPopupLayout.setLabel(label);
+        mPopupLayout.setMenu(menu);
+        mPopupLayout.setIcon(GRAY);
+        mPopupLayout.setLabelColor(mDefaultLabelTextColor);
+        mPopupLayout.setContentColor(mDefaultContentTextColor);
+        mPopupLayout.setColorSeparator(mDefaultSeparatorColor);
+        mPopupLayout.setTextSize(mDefaultTextSize);
+
+        identifyObject();
+        addField(mPopupLayout);
+
+        return mPopupLayout;
+    }
+
+    public PopupLayout addPopupLayout(String label, int menu, int icon) {
+        PopupLayout mPopupLayout = new PopupLayout(mContext);
+        mPopupLayout.setLabel(label);
+        mPopupLayout.setIcon(icon);
+        mPopupLayout.setMenu(menu);
+        mPopupLayout.setLabelColor(mDefaultLabelTextColor);
+        mPopupLayout.setContentColor(mDefaultContentTextColor);
+        mPopupLayout.setColorSeparator(mDefaultSeparatorColor);
+        mPopupLayout.setTextSize(mDefaultTextSize);
+
+        identifyObject();
+        addField(mPopupLayout);
+
+        return mPopupLayout;
+    }
+
+    public PopupLayout addPopupLayout(int label, String content, int menu) {
+        PopupLayout mPopupLayout = new PopupLayout(mContext);
+        mPopupLayout.setLabel(label);
+        mPopupLayout.setContent(content);
+        mPopupLayout.setMenu(menu);
+        mPopupLayout.setIcon(GRAY);
+        mPopupLayout.setLabelColor(mDefaultLabelTextColor);
+        mPopupLayout.setContentColor(mDefaultContentTextColor);
+        mPopupLayout.setColorSeparator(mDefaultSeparatorColor);
+        mPopupLayout.setTextSize(mDefaultTextSize);
+
+        identifyObject();
+        addField(mPopupLayout);
+
+        return mPopupLayout;
+    }
+
+    public PopupLayout addPopupLayout(int label, String content, int menu, int icon) {
+        PopupLayout mPopupLayout = new PopupLayout(mContext);
+        mPopupLayout.setLabel(label);
+        mPopupLayout.setContent(content);
+        mPopupLayout.setIcon(icon);
+        mPopupLayout.setMenu(menu);
+        mPopupLayout.setLabelColor(mDefaultLabelTextColor);
+        mPopupLayout.setContentColor(mDefaultContentTextColor);
+        mPopupLayout.setColorSeparator(mDefaultSeparatorColor);
+        mPopupLayout.setTextSize(mDefaultTextSize);
+
+        identifyObject();
+        addField(mPopupLayout);
+
+        return mPopupLayout;
+    }
+
+    public PopupLayout addPopupLayout(int label, String content, ArrayList<String> menu, int icon) {
+        PopupLayout mPopupLayout = new PopupLayout(mContext);
+        mPopupLayout.setLabel(label);
+        mPopupLayout.setContent(content);
+        mPopupLayout.setIcon(icon);
+        mPopupLayout.setCustomMenu(menu);
+        mPopupLayout.setLabelColor(mDefaultLabelTextColor);
+        mPopupLayout.setContentColor(mDefaultContentTextColor);
+        mPopupLayout.setColorSeparator(mDefaultSeparatorColor);
+        mPopupLayout.setTextSize(mDefaultTextSize);
+
+        identifyObject();
+        addField(mPopupLayout);
+
+        return mPopupLayout;
+    }
+
+    public PopupLayout addPopupLayout(int label, String content, String[] menu, int icon) {
+        PopupLayout mPopupLayout = new PopupLayout(mContext);
+        mPopupLayout.setLabel(label);
+        mPopupLayout.setContent(content);
+        mPopupLayout.setIcon(icon);
+        mPopupLayout.setCustomMenu(menu);
+        mPopupLayout.setLabelColor(mDefaultLabelTextColor);
+        mPopupLayout.setContentColor(mDefaultContentTextColor);
+        mPopupLayout.setColorSeparator(mDefaultSeparatorColor);
+        mPopupLayout.setTextSize(mDefaultTextSize);
+
+        identifyObject();
+        addField(mPopupLayout);
+
+        return mPopupLayout;
+    }
+
+    public PopupLayout addPopupLayout(int label, int menu) {
+        PopupLayout mPopupLayout = new PopupLayout(mContext);
+        mPopupLayout.setLabel(label);
+        mPopupLayout.setMenu(menu);
+        mPopupLayout.setIcon(GRAY);
+        mPopupLayout.setLabelColor(mDefaultLabelTextColor);
+        mPopupLayout.setContentColor(mDefaultContentTextColor);
+        mPopupLayout.setColorSeparator(mDefaultSeparatorColor);
+        mPopupLayout.setTextSize(mDefaultTextSize);
+
+        identifyObject();
+        addField(mPopupLayout);
+
+        return mPopupLayout;
+    }
+
+    public PopupLayout addPopupLayout(int label, ArrayList<String> menu) {
+        PopupLayout mPopupLayout = new PopupLayout(mContext);
+        mPopupLayout.setLabel(label);
+        mPopupLayout.setCustomMenu(menu);
+        mPopupLayout.setIcon(GRAY);
+        mPopupLayout.setLabelColor(mDefaultLabelTextColor);
+        mPopupLayout.setContentColor(mDefaultContentTextColor);
+        mPopupLayout.setColorSeparator(mDefaultSeparatorColor);
+        mPopupLayout.setTextSize(mDefaultTextSize);
+
+        identifyObject();
+        addField(mPopupLayout);
+
+        return mPopupLayout;
+    }
+
+
+    public PopupLayout addPopupLayout(String label, ArrayList<String> menu) {
+        PopupLayout mPopupLayout = new PopupLayout(mContext);
+        mPopupLayout.setLabel(label);
+        mPopupLayout.setCustomMenu(menu);
+        mPopupLayout.setIcon(GRAY);
+        mPopupLayout.setLabelColor(mDefaultLabelTextColor);
+        mPopupLayout.setContentColor(mDefaultContentTextColor);
+        mPopupLayout.setColorSeparator(mDefaultSeparatorColor);
+        mPopupLayout.setTextSize(mDefaultTextSize);
+
+        identifyObject();
+        addField(mPopupLayout);
+
+        return mPopupLayout;
+    }
+
+    public PopupLayout addPopupLayout(String label, ArrayList<String> menu, int icon) {
+        PopupLayout mPopupLayout = new PopupLayout(mContext);
+        mPopupLayout.setLabel(label);
+        mPopupLayout.setIcon(icon);
+        mPopupLayout.setCustomMenu(menu);
+        mPopupLayout.setLabelColor(mDefaultLabelTextColor);
+        mPopupLayout.setContentColor(mDefaultContentTextColor);
+        mPopupLayout.setColorSeparator(mDefaultSeparatorColor);
+        mPopupLayout.setTextSize(mDefaultTextSize);
+
+        identifyObject();
+        addField(mPopupLayout);
+
+        return mPopupLayout;
+    }
+
+    public PopupLayout addPopupLayout(int label, int menu, int icon) {
+        PopupLayout mPopupLayout = new PopupLayout(mContext);
+        mPopupLayout.setLabel(label);
+        mPopupLayout.setIcon(icon);
+        mPopupLayout.setMenu(menu);
+        mPopupLayout.setLabelColor(mDefaultLabelTextColor);
+        mPopupLayout.setContentColor(mDefaultContentTextColor);
+        mPopupLayout.setColorSeparator(mDefaultSeparatorColor);
+        mPopupLayout.setTextSize(mDefaultTextSize);
+
+        identifyObject();
+        addField(mPopupLayout);
+
+        return mPopupLayout;
+    }
+
+    public PopupLayout addPopupLayout(int label, String[] menu) {
+        PopupLayout mPopupLayout = new PopupLayout(mContext);
+        mPopupLayout.setLabel(label);
+        mPopupLayout.setCustomMenu(menu);
+        mPopupLayout.setIcon(GRAY);
+        mPopupLayout.setLabelColor(mDefaultLabelTextColor);
+        mPopupLayout.setContentColor(mDefaultContentTextColor);
+        mPopupLayout.setColorSeparator(mDefaultSeparatorColor);
+        mPopupLayout.setTextSize(mDefaultTextSize);
+
+        identifyObject();
+        addField(mPopupLayout);
+
+        return mPopupLayout;
+    }
+
+
+    public PopupLayout addPopupLayout(String label, String[] menu) {
+        PopupLayout mPopupLayout = new PopupLayout(mContext);
+        mPopupLayout.setLabel(label);
+        mPopupLayout.setCustomMenu(menu);
+        mPopupLayout.setIcon(GRAY);
+        mPopupLayout.setLabelColor(mDefaultLabelTextColor);
+        mPopupLayout.setContentColor(mDefaultContentTextColor);
+        mPopupLayout.setColorSeparator(mDefaultSeparatorColor);
+        mPopupLayout.setTextSize(mDefaultTextSize);
+
+        identifyObject();
+        addField(mPopupLayout);
+
+        return mPopupLayout;
+    }
+
+    public PopupLayout addPopupLayout(String label, String[] menu, int icon) {
+        PopupLayout mPopupLayout = new PopupLayout(mContext);
+        mPopupLayout.setLabel(label);
+        mPopupLayout.setIcon(icon);
+        mPopupLayout.setCustomMenu(menu);
+        mPopupLayout.setLabelColor(mDefaultLabelTextColor);
+        mPopupLayout.setContentColor(mDefaultContentTextColor);
+        mPopupLayout.setColorSeparator(mDefaultSeparatorColor);
+        mPopupLayout.setTextSize(mDefaultTextSize);
+
+        identifyObject();
+        addField(mPopupLayout);
+
+        return mPopupLayout;
+    }
+
+
+    /**-------------------------------------------------------------------------*/
+    /**------------------------GROUP LAYOUT-------------------------------------*/
 
 
     public View getLastField() {
@@ -360,6 +634,8 @@ public class PanelLayout extends LinearLayout {
             ((MultiTextLayout) getLastField()).showSeparator();
         } else if (getLastField() instanceof MultiEditTextLayout) {
             ((MultiEditTextLayout) getLastField()).showSeparator();
+        } else if (getLastField() instanceof PopupLayout) {
+            ((PopupLayout) getLastField()).showSeparator();
         }
     }
 
