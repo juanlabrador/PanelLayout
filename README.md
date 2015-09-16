@@ -21,7 +21,7 @@ In your xml
 -----------
 
 ```xml
-  <com.github.juanlabrador.panellayout.GroupLayout
+  <com.github.juanlabrador.panellayout.PanelLayout
       android:id="@+id/group"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"/>
@@ -45,7 +45,7 @@ Then, you must add this line to apply them
   xmlns:panel="http://schemas.android.com/apk/res-auto"
 ```
 ```xml
-  <com.github.juanlabrador.panellayout.GroupLayout
+  <com.github.juanlabrador.panellayout.PanelLayout
       android:id="@+id/group"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
@@ -66,13 +66,13 @@ By default:
 In your class java
 ------------------
 
-You declare a GroupLayout object:
+You declare a PanelLayout object:
 
 ```java
-  private GroupLayout mGroupLayout;
+  private PanelLayout mPanelLayout;
   ...
   ...
-  mGroupLayout = (GroupLayout) findViewById(R.id.group);
+  mPanelLayout = (PanelLayout) findViewById(R.id.group);
 
 ```
 
@@ -84,9 +84,9 @@ Add TextLayout
 You can use values String or Text as parameters.
 
 ```java
-  mGroupLayout.addTextLayout("Name", "Juan Labrador");
-  mGroupLayout.addTextLayout(R.string.age, "23");
-  mGroupLayout.addTextLayout("Develop by", "Juan Labrador");
+  mPanelLayout.addTextLayout("Name", "Juan Labrador");
+  mPanelLayout.addTextLayout(R.string.age, "23");
+  mPanelLayout.addTextLayout("Develop by", "Juan Labrador");
 ```
 
 To edit the label or content, you need to declare a TextLayout object:
@@ -94,7 +94,7 @@ To edit the label or content, you need to declare a TextLayout object:
 ```java
   private TextLayout mName;
   ...
-  mName = mGroupLayout.addTextLayout("Name", "Juan Labrador");
+  mName = mPanelLayout.addTextLayout("Name", "Juan Labrador");
   ...
   mName.setLabel("Last Name");
   mName.setContent("Labrador");
@@ -108,14 +108,14 @@ Add EditTextLayout
 You can use values String or Text as parameters, add too a InputType.
 
 ```java
-  mGroupLayout.addEditTextLayout("Username");
-  mGroupLayout.addEditTextLayout("Password");
+  mPanelLayout.addEditTextLayout("Username");
+  mPanelLayout.addEditTextLayout("Password");
 ```
 
 To edit the label or content, you need to declare a EditTextLayout object:
 
 ```java
-  EditTextLayout mPassword = mGroupLayout.addEditTextLayout("Password");
+  EditTextLayout mPassword = mPanelLayout.addEditTextLayout("Password");
 
   mPassword.isPassword(true);  // Change input type
 
@@ -126,7 +126,7 @@ Add MultiTextLayout
 ![MultiTextLayout](screen/MultiTextLayout.png)
 
 ```java
-  mGroupLayout.addSimpleMultiTextLayout(R.string.description);
+  mPanelLayout.addMultiTextLayout(R.string.description);
 
 ```
 
@@ -142,7 +142,7 @@ Add MultiEditTextLayout
 - Second parameter is for the content text.
 
 ```java
-  mGroupLayout.addMultiEditTextLayout(R.string.description);
+  mPanelLayout.addMultiEditTextLayout(R.string.description);
 ```
 
 Log
@@ -173,10 +173,10 @@ v1.0
 Developed by
 ------------
 
-* Juan Labrador - <juanjavierlabrador@gmail.com>
-* Twitter: @JuanLabrador
+- Juan Labrador - <juanjavierlabrador@gmail.com>
+- Twitter: <a href="https://twitter.com/juanlabrador">@JuanLabrador</a>
 
 Inspiration in
 --------------
 
-GroupedTextView - <https://github.com/vladexologija/GroupedTextView>
+<a href="https://github.com/vladexologija/GroupedTextView">GroupedTextView</a>

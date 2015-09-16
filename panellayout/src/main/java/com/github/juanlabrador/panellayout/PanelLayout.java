@@ -12,7 +12,7 @@ import android.widget.LinearLayout;
 /**
  * Created by juanlabrador on 15/09/15.
  */
-public class GroupLayout extends LinearLayout {
+public class PanelLayout extends LinearLayout {
 
     private static String TAG = "GroupLayout";
     private Context mContext;
@@ -36,7 +36,7 @@ public class GroupLayout extends LinearLayout {
     private int mDefaultTextSize = 14;
 
 
-    public GroupLayout(Context context, AttributeSet attrs) {
+    public PanelLayout(Context context, AttributeSet attrs) {
         super(context, attrs);
         mContext = context;
         mTypedArray = context.obtainStyledAttributes(attrs, R.styleable.GroupLayoutAttrs);
@@ -46,7 +46,7 @@ public class GroupLayout extends LinearLayout {
 
     private void initialize() {
         mLayoutInflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        mLayoutInflater.inflate(R.layout.group_layout, this);
+        mLayoutInflater.inflate(R.layout.panel_layout, this);
         mGroupContent = (LinearLayout) findViewById(R.id.group_layout);
         mItemContent = (LinearLayout) findViewById(R.id.item_layout);
         mItemContent.setVisibility(View.GONE);
