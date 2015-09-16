@@ -106,7 +106,7 @@ public class PanelLayout extends LinearLayout {
     /**
      *
      * @param label
-     * @return
+     * @return TextLayout
      */
     public TextLayout addTextLayout(int label) {
         TextLayout mTextLayout = new TextLayout(mContext);
@@ -125,7 +125,7 @@ public class PanelLayout extends LinearLayout {
     /**
      *
      * @param label
-     * @return
+     * @return TextLayout
      */
     public TextLayout addTextLayout(String label) {
         TextLayout mTextLayout = new TextLayout(mContext);
@@ -145,7 +145,7 @@ public class PanelLayout extends LinearLayout {
      *
      * @param label
      * @param content
-     * @return
+     * @return TextLayout
      */
     public TextLayout addTextLayout(String label, String content) {
         TextLayout mTextLayout = new TextLayout(mContext);
@@ -166,7 +166,7 @@ public class PanelLayout extends LinearLayout {
      *
      * @param label
      * @param content
-     * @return
+     * @return TextLayout
      */
     public TextLayout addTextLayout(int label, String content) {
         TextLayout mTextLayout = new TextLayout(mContext);
@@ -187,7 +187,7 @@ public class PanelLayout extends LinearLayout {
      *
      * @param label
      * @param content
-     * @return
+     * @return TextLayout
      */
     public TextLayout addTextLayout(int label, int content) {
         TextLayout mTextLayout = new TextLayout(mContext);
@@ -211,7 +211,7 @@ public class PanelLayout extends LinearLayout {
      *
      * @param label
      * @param content
-     * @return
+     * @return EditTextLayout
      */
     public EditTextLayout addEditTextLayout(String label, String content) {
         EditTextLayout mEditTextLayout = new EditTextLayout(mContext);
@@ -231,7 +231,7 @@ public class PanelLayout extends LinearLayout {
     /**
      *
      * @param label
-     * @return
+     * @return EditTextLayout
      */
     public EditTextLayout addEditTextLayout(String label) {
         EditTextLayout mEditTextLayout = new EditTextLayout(mContext);
@@ -251,7 +251,7 @@ public class PanelLayout extends LinearLayout {
      *
      * @param label
      * @param content
-     * @return
+     * @return EditTextLayout
      */
     public EditTextLayout addEditTextLayout(int label, String content) {
         EditTextLayout mEditTextLayout = new EditTextLayout(mContext);
@@ -271,7 +271,7 @@ public class PanelLayout extends LinearLayout {
     /**
      *
      * @param label
-     * @return
+     * @return EditTextLayout
      */
     public EditTextLayout addEditTextLayout(int label) {
         EditTextLayout mEditTextLayout = new EditTextLayout(mContext);
@@ -293,7 +293,7 @@ public class PanelLayout extends LinearLayout {
     /**
      *
      * @param content
-     * @return
+     * @return MultiTextLayout
      */
     public MultiTextLayout addMultiTextLayout(int content) {
         MultiTextLayout mMultiTextLayout = new MultiTextLayout(mContext);
@@ -311,7 +311,7 @@ public class PanelLayout extends LinearLayout {
     /**
      *
      * @param content
-     * @return
+     * @return MultiTextLayout
      */
     public MultiTextLayout addMultiTextLayout(String content) {
         MultiTextLayout mMultiTextLayout = new MultiTextLayout(mContext);
@@ -332,7 +332,7 @@ public class PanelLayout extends LinearLayout {
     /**
      * Create MultiEditText
      * @param hint
-     * @return
+     * @return MultiEditTextLayout
      */
     public MultiEditTextLayout addMultiEditTextLayout(int hint) {
         MultiEditTextLayout mMultiEditTextLayout = new MultiEditTextLayout(mContext);
@@ -350,7 +350,7 @@ public class PanelLayout extends LinearLayout {
     /**
      * Create MultiEditText
      * @param hint
-     * @return
+     * @return MultiEditTextLayout
      */
     public MultiEditTextLayout addMultiEditTextLayout(String hint) {
         MultiEditTextLayout mMultiEditTextLayout = new MultiEditTextLayout(mContext);
@@ -369,7 +369,7 @@ public class PanelLayout extends LinearLayout {
      *
      * @param hint
      * @param content
-     * @return
+     * @return MultiEditTextLayout
      */
     public MultiEditTextLayout addMultiEditTextLayout(int hint, int content) {
         MultiEditTextLayout mMultiEditTextLayout = new MultiEditTextLayout(mContext);
@@ -389,7 +389,7 @@ public class PanelLayout extends LinearLayout {
      *
      * @param hint
      * @param content
-     * @return
+     * @return MultiEditTextLayout
      */
     public MultiEditTextLayout addMultiEditTextLayout(String hint, int content) {
         MultiEditTextLayout mMultiEditTextLayout = new MultiEditTextLayout(mContext);
@@ -409,7 +409,7 @@ public class PanelLayout extends LinearLayout {
      *
      * @param hint
      * @param content
-     * @return
+     * @return MultiEditTextLayout
      */
     public MultiEditTextLayout addMultiEditTextLayout(int hint, String content) {
         MultiEditTextLayout mMultiEditTextLayout = new MultiEditTextLayout(mContext);
@@ -433,7 +433,7 @@ public class PanelLayout extends LinearLayout {
      * @param label
      * @param content
      * @param menu
-     * @return
+     * @return PopupLayout
      */
     public PopupLayout addPopupLayout(String label, String content, int menu) {
         PopupLayout mPopupLayout = new PopupLayout(mContext);
@@ -458,7 +458,7 @@ public class PanelLayout extends LinearLayout {
      * @param content
      * @param menu
      * @param icon
-     * @return
+     * @return PopupLayout
      */
     public PopupLayout addPopupLayout(String label, String content, int menu, int icon) {
         PopupLayout mPopupLayout = new PopupLayout(mContext);
@@ -481,7 +481,7 @@ public class PanelLayout extends LinearLayout {
      * Show popup
      * @param label
      * @param menu
-     * @return
+     * @return PopupLayout
      */
     public PopupLayout addPopupLayout(String label, int menu) {
         PopupLayout mPopupLayout = new PopupLayout(mContext);
@@ -504,7 +504,7 @@ public class PanelLayout extends LinearLayout {
      * @param label
      * @param menu
      * @param icon
-     * @return
+     * @return PopupLayout
      */
     public PopupLayout addPopupLayout(String label, int menu, int icon) {
         PopupLayout mPopupLayout = new PopupLayout(mContext);
@@ -527,7 +527,7 @@ public class PanelLayout extends LinearLayout {
      * @param label
      * @param content
      * @param menu
-     * @return
+     * @return PopupLayout
      */
     public PopupLayout addPopupLayout(int label, String content, int menu) {
         PopupLayout mPopupLayout = new PopupLayout(mContext);
@@ -552,7 +552,7 @@ public class PanelLayout extends LinearLayout {
      * @param content
      * @param menu
      * @param icon
-     * @return
+     * @return PopupLayout
      */
     public PopupLayout addPopupLayout(int label, String content, int menu, int icon) {
         PopupLayout mPopupLayout = new PopupLayout(mContext);
@@ -577,7 +577,7 @@ public class PanelLayout extends LinearLayout {
      * @param content
      * @param menu
      * @param icon
-     * @return
+     * @return PopupLayout
      */
     public PopupLayout addPopupLayout(int label, String content, ArrayList<String> menu, int icon) {
         PopupLayout mPopupLayout = new PopupLayout(mContext);
@@ -602,7 +602,7 @@ public class PanelLayout extends LinearLayout {
      * @param content
      * @param menu
      * @param icon
-     * @return
+     * @return PopupLayout
      */
     public PopupLayout addPopupLayout(int label, String content, String[] menu, int icon) {
         PopupLayout mPopupLayout = new PopupLayout(mContext);
@@ -625,7 +625,7 @@ public class PanelLayout extends LinearLayout {
      * Show popup
      * @param label
      * @param menu
-     * @return
+     * @return PopupLayout
      */
     public PopupLayout addPopupLayout(int label, int menu) {
         PopupLayout mPopupLayout = new PopupLayout(mContext);
@@ -647,7 +647,7 @@ public class PanelLayout extends LinearLayout {
      * Show popup
      * @param label
      * @param menu
-     * @return
+     * @return PopupLayout
      */
     public PopupLayout addPopupLayout(int label, ArrayList<String> menu) {
         PopupLayout mPopupLayout = new PopupLayout(mContext);
@@ -669,7 +669,7 @@ public class PanelLayout extends LinearLayout {
      * Show popup
      * @param label
      * @param menu
-     * @return
+     * @return PopupLayout
      */
     public PopupLayout addPopupLayout(String label, ArrayList<String> menu) {
         PopupLayout mPopupLayout = new PopupLayout(mContext);
@@ -692,7 +692,7 @@ public class PanelLayout extends LinearLayout {
      * @param label
      * @param menu
      * @param icon
-     * @return
+     * @return PopupLayout
      */
     public PopupLayout addPopupLayout(String label, ArrayList<String> menu, int icon) {
         PopupLayout mPopupLayout = new PopupLayout(mContext);
@@ -715,7 +715,7 @@ public class PanelLayout extends LinearLayout {
      * @param label
      * @param menu
      * @param icon
-     * @return
+     * @return PopupLayout
      */
     public PopupLayout addPopupLayout(int label, int menu, int icon) {
         PopupLayout mPopupLayout = new PopupLayout(mContext);
@@ -737,7 +737,7 @@ public class PanelLayout extends LinearLayout {
      * Show popup
      * @param label
      * @param menu
-     * @return
+     * @return PopupLayout
      */
     public PopupLayout addPopupLayout(int label, String[] menu) {
         PopupLayout mPopupLayout = new PopupLayout(mContext);
@@ -759,7 +759,7 @@ public class PanelLayout extends LinearLayout {
      * Show popup
      * @param label
      * @param menu
-     * @return
+     * @return PopupLayout
      */
     public PopupLayout addPopupLayout(String label, String[] menu) {
         PopupLayout mPopupLayout = new PopupLayout(mContext);
@@ -782,7 +782,7 @@ public class PanelLayout extends LinearLayout {
      * @param label
      * @param menu
      * @param icon
-     * @return
+     * @return PopupLayout
      */
     public PopupLayout addPopupLayout(String label, String[] menu, int icon) {
         PopupLayout mPopupLayout = new PopupLayout(mContext);
@@ -803,7 +803,13 @@ public class PanelLayout extends LinearLayout {
     /**-------------------------------------------------------------------------*/
     /**------------------------BUTTON LAYOUT-------------------------------------*/
 
-
+    /**
+     *
+     * @param label
+     * @param content
+     * @param icon
+     * @return ButtonLayout
+     */
     public ButtonLayout addButtonLayout(String label, String content, int icon) {
         ButtonLayout mButtonLayout = new ButtonLayout(mContext);
         mButtonLayout.setLabel(label);
@@ -820,6 +826,13 @@ public class PanelLayout extends LinearLayout {
         return mButtonLayout;
     }
 
+    /**
+     *
+     * @param label
+     * @param content
+     * @param icon
+     * @return ButtonLayout
+     */
     public ButtonLayout addButtonLayout(int label, int content, int icon) {
         ButtonLayout mButtonLayout = new ButtonLayout(mContext);
         mButtonLayout.setLabel(label);
@@ -836,6 +849,13 @@ public class PanelLayout extends LinearLayout {
         return mButtonLayout;
     }
 
+    /**
+     *
+     * @param label
+     * @param content
+     * @param icon
+     * @return ButtonLayout
+     */
     public ButtonLayout addButtonLayout(int label, String content, int icon) {
         ButtonLayout mButtonLayout = new ButtonLayout(mContext);
         mButtonLayout.setLabel(label);
@@ -852,6 +872,12 @@ public class PanelLayout extends LinearLayout {
         return mButtonLayout;
     }
 
+    /**
+     *
+     * @param label
+     * @param icon
+     * @return ButtonLayout
+     */
     public ButtonLayout addButtonLayout(int label, int icon) {
         ButtonLayout mButtonLayout = new ButtonLayout(mContext);
         mButtonLayout.setLabel(label);
@@ -867,6 +893,12 @@ public class PanelLayout extends LinearLayout {
         return mButtonLayout;
     }
 
+    /**
+     *
+     * @param label
+     * @param icon
+     * @return ButtonLayout
+     */
     public ButtonLayout addButtonLayout(String label, int icon) {
         ButtonLayout mButtonLayout = new ButtonLayout(mContext);
         mButtonLayout.setLabel(label);
@@ -883,9 +915,178 @@ public class PanelLayout extends LinearLayout {
     }
 
     /**-------------------------------------------------------------------------*/
+    /**------------------------SWITCH LAYOUT-------------------------------------*/
+
+    /**
+     *
+     * @param label
+     * @return SwitchLayout
+     */
+    public SwitchLayout addSwitchLayout(String label) {
+        SwitchLayout mSwitchLayout = new SwitchLayout(mContext);
+        mSwitchLayout.setLabel(label);
+        mSwitchLayout.setLabelColor(mDefaultLabelTextColor);
+        mSwitchLayout.setColorSeparator(mDefaultSeparatorColor);
+        mSwitchLayout.setLabelSize(mDefaultTextSize);
+        mSwitchLayout.setSwitchColor(Color.parseColor("#43D95D"));
+
+        identifyObject();
+        addField(mSwitchLayout);
+
+        return mSwitchLayout;
+    }
+
+    /**
+     *
+     * @param label
+     * @return SwitchLayout
+     */
+    public SwitchLayout addSwitchLayout(int label) {
+        SwitchLayout mSwitchLayout = new SwitchLayout(mContext);
+        mSwitchLayout.setLabel(label);
+        mSwitchLayout.setLabelColor(mDefaultLabelTextColor);
+        mSwitchLayout.setColorSeparator(mDefaultSeparatorColor);
+        mSwitchLayout.setLabelSize(mDefaultTextSize);
+        mSwitchLayout.setSwitchColor(Color.parseColor("#43D95D"));
+
+        identifyObject();
+        addField(mSwitchLayout);
+
+        return mSwitchLayout;
+    }
+
+    /**
+     *
+     * @param label
+     * @param check
+     * @return SwitchLayout
+     */
+    public SwitchLayout addSwitchLayout(String label, boolean check) {
+        SwitchLayout mSwitchLayout = new SwitchLayout(mContext);
+        mSwitchLayout.setLabel(label);
+        mSwitchLayout.setLabelColor(mDefaultLabelTextColor);
+        mSwitchLayout.setColorSeparator(mDefaultSeparatorColor);
+        mSwitchLayout.setLabelSize(mDefaultTextSize);
+        mSwitchLayout.setSwitchColor(Color.parseColor("#43D95D"));
+        mSwitchLayout.setChecked(check);
+
+        identifyObject();
+        addField(mSwitchLayout);
+
+        return mSwitchLayout;
+    }
+
+    /**
+     *
+     * @param label
+     * @param check
+     * @return SwitchLayout
+     */
+    public SwitchLayout addSwitchLayout(int label, boolean check) {
+        SwitchLayout mSwitchLayout = new SwitchLayout(mContext);
+        mSwitchLayout.setLabel(label);
+        mSwitchLayout.setLabelColor(mDefaultLabelTextColor);
+        mSwitchLayout.setColorSeparator(mDefaultSeparatorColor);
+        mSwitchLayout.setLabelSize(mDefaultTextSize);
+        mSwitchLayout.setSwitchColor(Color.parseColor("#43D95D"));
+        mSwitchLayout.setChecked(check);
+
+        identifyObject();
+        addField(mSwitchLayout);
+
+        return mSwitchLayout;
+    }
+
+    /**
+     *
+     * @param label
+     * @param color
+     * @return SwitchLayout
+     */
+    public SwitchLayout addSwitchLayout(String label, int color) {
+        SwitchLayout mSwitchLayout = new SwitchLayout(mContext);
+        mSwitchLayout.setLabel(label);
+        mSwitchLayout.setLabelColor(mDefaultLabelTextColor);
+        mSwitchLayout.setColorSeparator(mDefaultSeparatorColor);
+        mSwitchLayout.setLabelSize(mDefaultTextSize);
+        mSwitchLayout.setSwitchColor(color);
+
+        identifyObject();
+        addField(mSwitchLayout);
+
+        return mSwitchLayout;
+    }
+
+    /**
+     * @param label
+     * @param color
+     * @return SwitchLayout
+     */
+    public SwitchLayout addSwitchLayout(int label, int color) {
+        SwitchLayout mSwitchLayout = new SwitchLayout(mContext);
+        mSwitchLayout.setLabel(label);
+        mSwitchLayout.setLabelColor(mDefaultLabelTextColor);
+        mSwitchLayout.setColorSeparator(mDefaultSeparatorColor);
+        mSwitchLayout.setLabelSize(mDefaultTextSize);
+        mSwitchLayout.setSwitchColor(color);
+
+        identifyObject();
+        addField(mSwitchLayout);
+
+        return mSwitchLayout;
+    }
+
+    /**
+     *
+     * @param label
+     * @param color
+     * @param check
+     * @return SwitchLayout
+     */
+    public SwitchLayout addSwitchLayout(String label, int color, boolean check) {
+        SwitchLayout mSwitchLayout = new SwitchLayout(mContext);
+        mSwitchLayout.setLabel(label);
+        mSwitchLayout.setLabelColor(mDefaultLabelTextColor);
+        mSwitchLayout.setColorSeparator(mDefaultSeparatorColor);
+        mSwitchLayout.setLabelSize(mDefaultTextSize);
+        mSwitchLayout.setSwitchColor(color);
+        mSwitchLayout.setChecked(check);
+
+        identifyObject();
+        addField(mSwitchLayout);
+
+        return mSwitchLayout;
+    }
+
+    /**
+     * @param label
+     * @param color
+     * @param check
+     * @return SwitchLayout
+     */
+    public SwitchLayout addSwitchLayout(int label, int color, boolean check) {
+        SwitchLayout mSwitchLayout = new SwitchLayout(mContext);
+        mSwitchLayout.setLabel(label);
+        mSwitchLayout.setLabelColor(mDefaultLabelTextColor);
+        mSwitchLayout.setColorSeparator(mDefaultSeparatorColor);
+        mSwitchLayout.setLabelSize(mDefaultTextSize);
+        mSwitchLayout.setSwitchColor(color);
+        mSwitchLayout.setChecked(check);
+
+        identifyObject();
+        addField(mSwitchLayout);
+
+        return mSwitchLayout;
+    }
+
+    /**-------------------------------------------------------------------------*/
     /**------------------------GROUP LAYOUT-------------------------------------*/
 
 
+    /**
+     *
+     * @return View
+     */
     public View getLastField() {
         View view = null;
         if (!isEmpty()){
@@ -909,6 +1110,8 @@ public class PanelLayout extends LinearLayout {
             ((PopupLayout) getLastField()).showSeparator();
         } else if (getLastField() instanceof ButtonLayout) {
             ((ButtonLayout) getLastField()).showSeparator();
+        } else if (getLastField() instanceof SwitchLayout) {
+            ((SwitchLayout) getLastField()).showSeparator();
         }
     }
 
@@ -920,10 +1123,18 @@ public class PanelLayout extends LinearLayout {
         mItemContent.removeAllViewsInLayout();
     }
 
+    /**
+     *
+     * @return size panel
+     */
     public int size() {
         return mItemContent.getChildCount();
     }
 
+    /**
+     *
+     * @return true if is empty
+     */
     public boolean isEmpty() {
         return mItemContent.getChildCount() == 0;
     }
