@@ -10,13 +10,13 @@
     tools:context=".MainActivity">
 
 
-    <com.github.juanlabrador.panellayout.GroupLayout
+    <com.github.juanlabrador.panellayout.PanelLayout
         android:id="@+id/group"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         panel:textSizeLayout="16sp"/>
 
-    <com.github.juanlabrador.panellayout.GroupLayout
+    <com.github.juanlabrador.panellayout.PanelLayout
         android:id="@+id/group2"
         android:layout_below="@+id/group"
         android:layout_width="match_parent"
