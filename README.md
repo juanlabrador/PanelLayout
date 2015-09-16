@@ -6,7 +6,7 @@ A group of view in container to style iOS 7. For API 19+
 How to use
 ----------
 ```groovy
-compile 'com.github.juanlabrador:panellayout:1.9@aar'
+compile 'com.github.juanlabrador:panellayout:2.0@aar'
 ```
 
 In your xml
@@ -242,8 +242,42 @@ Add ExtendEditTextLayout
 ```java
   mPanelLayout.addExtendEditTextLayout(R.mipmap.marker, "Address");
 ```
+Add ExtendValidatorTextLayout
+-------------------
+![ExtendValidatorTextLayoutError](screen/ExtendValidatorTextLayoutError.png)
+
+You can use values String or Text. Use it to validate a search.
+
+```java
+  final ExtendValidatorTextLayout mValidator = mPanelLayout.addExtendValidatorLayout(R.mipmap.message, "Email");
+  mValidator.addTextChangedListener(new TextWatcher() {
+      @Override
+      public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+      }
+
+      @Override
+      public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+      }
+
+      @Override
+      public void afterTextChanged(Editable editable) {
+          if (mValidator.getContent().equals("juan@email.com")) {
+              mValidator.dataCheck();
+          } else if (mValidator.getContent().equals("juan@dd.e")) {
+              mValidator.dataError();
+          } else {
+              mValidator.dataProgress();
+          }
+      }
+  });
+```
 Log
 ----
+v2.0
+- Added ExtendValidatorTextLayout
+
 v1.9
 - Added ExtendEditTextLayout
     - Added isURL(boolean);

@@ -113,7 +113,7 @@ public class PanelLayout extends LinearLayout {
 
     /**
      *
-     * @param label
+     * @param label label
      * @return TextLayout
      */
     public TextLayout addTextLayout(int label) {
@@ -132,7 +132,7 @@ public class PanelLayout extends LinearLayout {
 
     /**
      *
-     * @param label
+     * @param label label
      * @return TextLayout
      */
     public TextLayout addTextLayout(String label) {
@@ -151,8 +151,8 @@ public class PanelLayout extends LinearLayout {
 
     /**
      *
-     * @param label
-     * @param content
+     * @param label label
+     * @param content content
      * @return TextLayout
      */
     public TextLayout addTextLayout(String label, String content) {
@@ -172,8 +172,8 @@ public class PanelLayout extends LinearLayout {
 
     /**
      *
-     * @param label
-     * @param content
+     * @param label label
+     * @param content content
      * @return TextLayout
      */
     public TextLayout addTextLayout(int label, String content) {
@@ -193,8 +193,8 @@ public class PanelLayout extends LinearLayout {
 
     /**
      *
-     * @param label
-     * @param content
+     * @param label label
+     * @param content content
      * @return TextLayout
      */
     public TextLayout addTextLayout(int label, int content) {
@@ -217,8 +217,8 @@ public class PanelLayout extends LinearLayout {
 
     /**
      *
-     * @param label
-     * @param content
+     * @param label label
+     * @param content content
      * @return EditTextLayout
      */
     public EditTextLayout addEditTextLayout(String label, String content) {
@@ -238,7 +238,7 @@ public class PanelLayout extends LinearLayout {
 
     /**
      *
-     * @param label
+     * @param label label
      * @return EditTextLayout
      */
     public EditTextLayout addEditTextLayout(String label) {
@@ -257,8 +257,8 @@ public class PanelLayout extends LinearLayout {
 
     /**
      *
-     * @param label
-     * @param content
+     * @param label label
+     * @param content content
      * @return EditTextLayout
      */
     public EditTextLayout addEditTextLayout(int label, String content) {
@@ -278,7 +278,7 @@ public class PanelLayout extends LinearLayout {
 
     /**
      *
-     * @param label
+     * @param label label
      * @return EditTextLayout
      */
     public EditTextLayout addEditTextLayout(int label) {
@@ -300,7 +300,7 @@ public class PanelLayout extends LinearLayout {
 
     /**
      *
-     * @param content
+     * @param content content
      * @return MultiTextLayout
      */
     public MultiTextLayout addMultiTextLayout(int content) {
@@ -318,7 +318,7 @@ public class PanelLayout extends LinearLayout {
 
     /**
      *
-     * @param content
+     * @param content content
      * @return MultiTextLayout
      */
     public MultiTextLayout addMultiTextLayout(String content) {
@@ -339,7 +339,7 @@ public class PanelLayout extends LinearLayout {
 
     /**
      * Create MultiEditText
-     * @param hint
+     * @param hint hint
      * @return MultiEditTextLayout
      */
     public MultiEditTextLayout addMultiEditTextLayout(int hint) {
@@ -357,7 +357,7 @@ public class PanelLayout extends LinearLayout {
 
     /**
      * Create MultiEditText
-     * @param hint
+     * @param hint hint
      * @return MultiEditTextLayout
      */
     public MultiEditTextLayout addMultiEditTextLayout(String hint) {
@@ -375,8 +375,8 @@ public class PanelLayout extends LinearLayout {
 
     /**
      *
-     * @param hint
-     * @param content
+     * @param hint hint
+     * @param content content
      * @return MultiEditTextLayout
      */
     public MultiEditTextLayout addMultiEditTextLayout(int hint, int content) {
@@ -395,8 +395,8 @@ public class PanelLayout extends LinearLayout {
 
     /**
      *
-     * @param hint
-     * @param content
+     * @param hint hint
+     * @param content content
      * @return MultiEditTextLayout
      */
     public MultiEditTextLayout addMultiEditTextLayout(String hint, int content) {
@@ -415,8 +415,8 @@ public class PanelLayout extends LinearLayout {
 
     /**
      *
-     * @param hint
-     * @param content
+     * @param hint hint
+     * @param content content
      * @return MultiEditTextLayout
      */
     public MultiEditTextLayout addMultiEditTextLayout(int hint, String content) {
@@ -438,9 +438,9 @@ public class PanelLayout extends LinearLayout {
 
     /**
      * Show popup
-     * @param label
-     * @param content
-     * @param menu
+     * @param label label
+     * @param content content
+     * @param menu menu
      * @return PopupLayout
      */
     public PopupLayout addPopupLayout(String label, String content, int menu) {
@@ -462,10 +462,10 @@ public class PanelLayout extends LinearLayout {
 
     /**
      * Show popup
-     * @param label
-     * @param content
-     * @param menu
-     * @param icon
+     * @param label label
+     * @param content content
+     * @param menu menu
+     * @param icon icon
      * @return PopupLayout
      */
     public PopupLayout addPopupLayout(String label, String content, int menu, int icon) {
@@ -487,8 +487,8 @@ public class PanelLayout extends LinearLayout {
 
     /**
      * Show popup
-     * @param label
-     * @param menu
+     * @param label label
+     * @param menu menu
      * @return PopupLayout
      */
     public PopupLayout addPopupLayout(String label, int menu) {
@@ -509,9 +509,9 @@ public class PanelLayout extends LinearLayout {
 
     /**
      * Show popup
-     * @param label
-     * @param menu
-     * @param icon
+     * @param label label
+     * @param menu menu
+     * @param icon icon
      * @return PopupLayout
      */
     public PopupLayout addPopupLayout(String label, int menu, int icon) {
@@ -532,9 +532,9 @@ public class PanelLayout extends LinearLayout {
 
     /**
      * Show popup
-     * @param label
-     * @param content
-     * @param menu
+     * @param label label
+     * @param content content
+     * @param menu menu
      * @return PopupLayout
      */
     public PopupLayout addPopupLayout(int label, String content, int menu) {
@@ -556,10 +556,10 @@ public class PanelLayout extends LinearLayout {
 
     /**
      * Show popup
-     * @param label
-     * @param content
-     * @param menu
-     * @param icon
+     * @param label label
+     * @param content content
+     * @param menu menu
+     * @param icon icon
      * @return PopupLayout
      */
     public PopupLayout addPopupLayout(int label, String content, int menu, int icon) {
@@ -581,10 +581,10 @@ public class PanelLayout extends LinearLayout {
 
     /**
      * Show popup
-     * @param label
-     * @param content
-     * @param menu
-     * @param icon
+     * @param label label
+     * @param content content
+     * @param menu menu
+     * @param icon icon
      * @return PopupLayout
      */
     public PopupLayout addPopupLayout(int label, String content, ArrayList<String> menu, int icon) {
@@ -606,10 +606,10 @@ public class PanelLayout extends LinearLayout {
 
     /**
      * Show popup
-     * @param label
-     * @param content
-     * @param menu
-     * @param icon
+     * @param label label
+     * @param content content
+     * @param menu menu
+     * @param icon icon
      * @return PopupLayout
      */
     public PopupLayout addPopupLayout(int label, String content, String[] menu, int icon) {
@@ -631,8 +631,8 @@ public class PanelLayout extends LinearLayout {
 
     /**
      * Show popup
-     * @param label
-     * @param menu
+     * @param label label
+     * @param menu menu
      * @return PopupLayout
      */
     public PopupLayout addPopupLayout(int label, int menu) {
@@ -653,8 +653,8 @@ public class PanelLayout extends LinearLayout {
 
     /**
      * Show popup
-     * @param label
-     * @param menu
+     * @param label label
+     * @param menu menu
      * @return PopupLayout
      */
     public PopupLayout addPopupLayout(int label, ArrayList<String> menu) {
@@ -675,8 +675,8 @@ public class PanelLayout extends LinearLayout {
 
     /**
      * Show popup
-     * @param label
-     * @param menu
+     * @param label label
+     * @param menu menu
      * @return PopupLayout
      */
     public PopupLayout addPopupLayout(String label, ArrayList<String> menu) {
@@ -697,9 +697,9 @@ public class PanelLayout extends LinearLayout {
 
     /**
      * Show popup
-     * @param label
-     * @param menu
-     * @param icon
+     * @param label label
+     * @param menu menu
+     * @param icon icon
      * @return PopupLayout
      */
     public PopupLayout addPopupLayout(String label, ArrayList<String> menu, int icon) {
@@ -720,9 +720,9 @@ public class PanelLayout extends LinearLayout {
 
     /**
      * Show popup
-     * @param label
-     * @param menu
-     * @param icon
+     * @param label label
+     * @param menu menu
+     * @param icon icon
      * @return PopupLayout
      */
     public PopupLayout addPopupLayout(int label, int menu, int icon) {
@@ -743,8 +743,8 @@ public class PanelLayout extends LinearLayout {
 
     /**
      * Show popup
-     * @param label
-     * @param menu
+     * @param label label
+     * @param menu menu
      * @return PopupLayout
      */
     public PopupLayout addPopupLayout(int label, String[] menu) {
@@ -765,8 +765,8 @@ public class PanelLayout extends LinearLayout {
 
     /**
      * Show popup
-     * @param label
-     * @param menu
+     * @param label label
+     * @param menu menu
      * @return PopupLayout
      */
     public PopupLayout addPopupLayout(String label, String[] menu) {
@@ -787,9 +787,9 @@ public class PanelLayout extends LinearLayout {
 
     /**
      * Show popup
-     * @param label
-     * @param menu
-     * @param icon
+     * @param label label
+     * @param menu menu
+     * @param icon icon
      * @return PopupLayout
      */
     public PopupLayout addPopupLayout(String label, String[] menu, int icon) {
@@ -813,9 +813,9 @@ public class PanelLayout extends LinearLayout {
 
     /**
      *
-     * @param label
-     * @param content
-     * @param icon
+     * @param label label
+     * @param content content
+     * @param icon icon
      * @return ButtonLayout
      */
     public ButtonLayout addButtonLayout(String label, String content, int icon) {
@@ -836,9 +836,9 @@ public class PanelLayout extends LinearLayout {
 
     /**
      *
-     * @param label
-     * @param content
-     * @param icon
+     * @param label label
+     * @param content content
+     * @param icon icon
      * @return ButtonLayout
      */
     public ButtonLayout addButtonLayout(int label, int content, int icon) {
@@ -859,9 +859,9 @@ public class PanelLayout extends LinearLayout {
 
     /**
      *
-     * @param label
-     * @param content
-     * @param icon
+     * @param label label
+     * @param content content
+     * @param icon icon
      * @return ButtonLayout
      */
     public ButtonLayout addButtonLayout(int label, String content, int icon) {
@@ -882,8 +882,8 @@ public class PanelLayout extends LinearLayout {
 
     /**
      *
-     * @param label
-     * @param icon
+     * @param label label
+     * @param icon icon
      * @return ButtonLayout
      */
     public ButtonLayout addButtonLayout(int label, int icon) {
@@ -903,8 +903,8 @@ public class PanelLayout extends LinearLayout {
 
     /**
      *
-     * @param label
-     * @param icon
+     * @param label label
+     * @param icon icon
      * @return ButtonLayout
      */
     public ButtonLayout addButtonLayout(String label, int icon) {
@@ -927,7 +927,7 @@ public class PanelLayout extends LinearLayout {
 
     /**
      *
-     * @param label
+     * @param label label
      * @return SwitchLayout
      */
     public SwitchLayout addSwitchLayout(String label) {
@@ -946,7 +946,7 @@ public class PanelLayout extends LinearLayout {
 
     /**
      *
-     * @param label
+     * @param label label
      * @return SwitchLayout
      */
     public SwitchLayout addSwitchLayout(int label) {
@@ -965,8 +965,8 @@ public class PanelLayout extends LinearLayout {
 
     /**
      *
-     * @param label
-     * @param check
+     * @param label label
+     * @param check check
      * @return SwitchLayout
      */
     public SwitchLayout addSwitchLayout(String label, boolean check) {
@@ -986,8 +986,8 @@ public class PanelLayout extends LinearLayout {
 
     /**
      *
-     * @param label
-     * @param check
+     * @param label label
+     * @param check check
      * @return SwitchLayout
      */
     public SwitchLayout addSwitchLayout(int label, boolean check) {
@@ -1007,8 +1007,8 @@ public class PanelLayout extends LinearLayout {
 
     /**
      *
-     * @param label
-     * @param color
+     * @param label label
+     * @param color color
      * @return SwitchLayout
      */
     public SwitchLayout addSwitchLayout(String label, int color) {
@@ -1026,8 +1026,8 @@ public class PanelLayout extends LinearLayout {
     }
 
     /**
-     * @param label
-     * @param color
+     * @param label label
+     * @param color color
      * @return SwitchLayout
      */
     public SwitchLayout addSwitchLayout(int label, int color) {
@@ -1046,9 +1046,9 @@ public class PanelLayout extends LinearLayout {
 
     /**
      *
-     * @param label
-     * @param color
-     * @param check
+     * @param label label
+     * @param color color
+     * @param check check
      * @return SwitchLayout
      */
     public SwitchLayout addSwitchLayout(String label, int color, boolean check) {
@@ -1067,9 +1067,9 @@ public class PanelLayout extends LinearLayout {
     }
 
     /**
-     * @param label
-     * @param color
-     * @param check
+     * @param label label
+     * @param color color
+     * @param check check
      * @return SwitchLayout
      */
     public SwitchLayout addSwitchLayout(int label, int color, boolean check) {
@@ -1176,9 +1176,9 @@ public class PanelLayout extends LinearLayout {
 
     /**
      *
-     * @param icon
-     * @param label
-     * @param content
+     * @param icon icon
+     * @param label label
+     * @param content content
      * @return ExtendTextLayout
      */
     public ExtendTextLayout addExtendTextLayout(int icon, String label, String content) {
@@ -1199,9 +1199,9 @@ public class PanelLayout extends LinearLayout {
 
     /**
      *
-     * @param icon
-     * @param label
-     * @param content
+     * @param icon icon
+     * @param label label
+     * @param content content
      * @return ExtendTextLayout
      */
     public ExtendTextLayout addExtendTextLayout(int icon, int label, String content) {
@@ -1225,8 +1225,8 @@ public class PanelLayout extends LinearLayout {
 
     /**
      *
-     * @param icon
-     * @param label
+     * @param icon icon
+     * @param label label
      * @return ExtendEditTextLayout
      */
     public ExtendEditTextLayout addExtendEditTextLayout(int icon, String label) {
@@ -1246,8 +1246,8 @@ public class PanelLayout extends LinearLayout {
 
     /**
      *
-     * @param icon
-     * @param label
+     * @param icon icon
+     * @param label label
      * @return ExtendEditTextLayout
      */
     public ExtendEditTextLayout addExtendEditTextLayout(int icon, int label) {
@@ -1267,9 +1267,9 @@ public class PanelLayout extends LinearLayout {
 
     /**
      *
-     * @param icon
-     * @param label
-     * @param content
+     * @param icon icon
+     * @param label label
+     * @param content content
      * @return ExtendEditTextLayout
      */
     public ExtendEditTextLayout addExtendEditTextLayout(int icon, String label, String content) {
@@ -1290,9 +1290,9 @@ public class PanelLayout extends LinearLayout {
 
     /**
      *
-     * @param icon
-     * @param label
-     * @param content
+     * @param icon icon
+     * @param label label
+     * @param content content
      * @return ExtendEditTextLayout
      */
     public ExtendEditTextLayout addExtendEditTextLayout(int icon, int label, String content) {
@@ -1309,6 +1309,74 @@ public class PanelLayout extends LinearLayout {
         addField(mExtendEditTextLayout);
 
         return mExtendEditTextLayout;
+    }
+
+    /**-------------------------------------------------------------------------*/
+    /**------------------------EXTEND VALIDATOR TEXT LAYOUT-------------------------------------*/
+
+    /**
+     *
+     * @param icon icon
+     * @param label label
+     * @return ExtendValidatorTextLayout
+     */
+    public ExtendValidatorTextLayout addExtendValidatorLayout(int icon, String label) {
+        ExtendValidatorTextLayout mExtendValidatorTextLayout = new ExtendValidatorTextLayout(mContext);
+        mExtendValidatorTextLayout.setLabel(label);
+        mExtendValidatorTextLayout.setIcon(icon);
+        mExtendValidatorTextLayout.setLabelColor(mDefaultContentTextColor);
+        mExtendValidatorTextLayout.setContentColor(mDefaultLabelTextColor);
+        mExtendValidatorTextLayout.setColorSeparator(mDefaultSeparatorColor);
+        mExtendValidatorTextLayout.setTextSize(mDefaultTextSize);
+
+        identifyObject();
+        addField(mExtendValidatorTextLayout);
+
+        return mExtendValidatorTextLayout;
+    }
+
+    /**
+     *
+     * @param icon icon
+     * @param label label
+     * @return ExtendValidatorTextLayout
+     */
+    public ExtendValidatorTextLayout addExtendValidatorLayout(int icon, int label) {
+        ExtendValidatorTextLayout mExtendValidatorTextLayout = new ExtendValidatorTextLayout(mContext);
+        mExtendValidatorTextLayout.setLabel(label);
+        mExtendValidatorTextLayout.setIcon(icon);
+        mExtendValidatorTextLayout.setLabelColor(mDefaultContentTextColor);
+        mExtendValidatorTextLayout.setContentColor(mDefaultLabelTextColor);
+        mExtendValidatorTextLayout.setColorSeparator(mDefaultSeparatorColor);
+        mExtendValidatorTextLayout.setTextSize(mDefaultTextSize);
+
+        identifyObject();
+        addField(mExtendValidatorTextLayout);
+
+        return mExtendValidatorTextLayout;
+    }
+
+    /**
+     *
+     * @param icon icon
+     * @param label label
+     * @param content content
+     * @return ExtendValidatorTextLayout
+     */
+    public ExtendValidatorTextLayout addExtendValidatorLayout(int icon, int label, String content) {
+        ExtendValidatorTextLayout mExtendValidatorTextLayout = new ExtendValidatorTextLayout(mContext);
+        mExtendValidatorTextLayout.setLabel(label);
+        mExtendValidatorTextLayout.setIcon(icon);
+        mExtendValidatorTextLayout.setContent(content);
+        mExtendValidatorTextLayout.setLabelColor(mDefaultContentTextColor);
+        mExtendValidatorTextLayout.setContentColor(mDefaultLabelTextColor);
+        mExtendValidatorTextLayout.setColorSeparator(mDefaultSeparatorColor);
+        mExtendValidatorTextLayout.setTextSize(mDefaultTextSize);
+
+        identifyObject();
+        addField(mExtendValidatorTextLayout);
+
+        return mExtendValidatorTextLayout;
     }
 
     /**-------------------------------------------------------------------------*/
@@ -1350,6 +1418,8 @@ public class PanelLayout extends LinearLayout {
             ((ExtendTextLayout) getLastField()).showSeparator();
         } else if (getLastField() instanceof ExtendEditTextLayout) {
             ((ExtendEditTextLayout) getLastField()).showSeparator();
+        } else if (getLastField() instanceof ExtendValidatorTextLayout) {
+            ((ExtendValidatorTextLayout) getLastField()).showSeparator();
         }
     }
 

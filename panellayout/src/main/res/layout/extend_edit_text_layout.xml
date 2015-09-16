@@ -34,6 +34,7 @@
                 android:layout_marginRight="@dimen/padding_right"
                 android:ellipsize="marquee"
                 android:singleLine="true"
+                android:focusable="false"
                 android:scrollHorizontally="true"/>
             
         </LinearLayout>
