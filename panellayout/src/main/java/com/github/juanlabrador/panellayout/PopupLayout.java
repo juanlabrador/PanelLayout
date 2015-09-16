@@ -1,6 +1,7 @@
 package com.github.juanlabrador.panellayout;
 
 import android.content.Context;
+import android.os.Build;
 import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -165,7 +166,10 @@ public class PopupLayout extends LinearLayout implements View.OnClickListener, P
      * @param menu
      */
     private void showPopupMenu(View view, int menu) {
-        mPopup = new PopupMenu(mContext, view, Gravity.RIGHT);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP_MR1)
+            mPopup = new PopupMenu(mContext, view, Gravity.RIGHT, 0, R.style.PopupMenu);
+        else
+            mPopup = new PopupMenu(mContext, view, Gravity.RIGHT);
         mPopup.getMenuInflater().inflate(menu, mPopup.getMenu());
         mPopup.setOnMenuItemClickListener(this);
         mPopup.show();
@@ -178,7 +182,10 @@ public class PopupLayout extends LinearLayout implements View.OnClickListener, P
      */
     private void showPopupCustomMenu(View view, ArrayList<String> menu) {
         mCustomMenu = menu;
-        mPopup = new PopupMenu(mContext, view, Gravity.RIGHT);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP_MR1)
+            mPopup = new PopupMenu(mContext, view, Gravity.RIGHT, 0, R.style.PopupMenu);
+        else
+            mPopup = new PopupMenu(mContext, view, Gravity.RIGHT);
         mPopup.getMenu().clear();
         for (int i = 0; i < mCustomMenu.size(); i++) {
             mPopup.getMenu().add(0, 0, i, mCustomMenu.get(i));
@@ -194,7 +201,10 @@ public class PopupLayout extends LinearLayout implements View.OnClickListener, P
      */
     private void showPopupCustomMenu(View view, String[] menu) {
         mCustomMenu2 = menu;
-        mPopup = new PopupMenu(mContext, view, Gravity.RIGHT);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP_MR1)
+            mPopup = new PopupMenu(mContext, view, Gravity.RIGHT, 0, R.style.PopupMenu);
+        else
+            mPopup = new PopupMenu(mContext, view, Gravity.RIGHT);
         mPopup.getMenu().clear();
         for (int i = 0; i < mCustomMenu2.length; i++) {
             mPopup.getMenu().add(0, 0, i, mCustomMenu2[i]);

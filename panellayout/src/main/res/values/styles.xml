@@ -18,4 +18,10 @@
 		<item name="android:paddingBottom">4dp</item>
 	</style>
 
+	<style name="PopupMenu">
+		<item name="android:popupBackground">@drawable/elevation</item>
+		<item name="android:textColor">@android:color/black</item>
+		<item name="android:textSize">14sp</item>
+	</style>
+
 </resources>
