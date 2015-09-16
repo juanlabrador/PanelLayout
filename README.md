@@ -1,25 +1,13 @@
 # PanelLayout  [ ![Download](https://api.bintray.com/packages/juanlabrador/maven/PanelLayout/images/download.svg) ](https://bintray.com/juanlabrador/maven/PanelLayout/_latestVersion)
-A group of view in container to style iOS 7. For API 16+
+A group of view in container to style iOS 7. For API 19+
 
-
-Description
------------
-
-- TextLayout: Consisting of two TextView to display content.
-- EditTextLayout: Consisting of one TextView and one EditText.
-- MultiTextLayout: Consisting of one TextView to display large text.
-- MultiEditTextLayout: Consisting of one EditText to write large text.
-- SwitchLayout: Consisting of one label and a switch for control of State.
-- ButtonLayout: Consisting of two TextView and one ImageView for to do an action click.
-- PopupLayout: Consisting of two TextView and one ImageView for to do an action popup menu.
-- ValidatorTextLayout: Consisting of one TextVIew and one EditText, with Icon + popup message.
-
+![PanelLayout](screen/demo.png)
 
 How to use
 ----------
 
 ```groovy
-compile 'com.github.juanlabrador:panellayout:1.7@aar'
+compile 'com.github.juanlabrador:panellayout:1.8@aar'
 ```
 
 In your xml
@@ -258,8 +246,21 @@ You can use values String or Text. Use it to validate a search.
   });
 ```
 
+Add ExtendTextLayout
+--------------------
+
+![ExtendTextLayout](screen/ExtendTextLayout.png)
+
+```java
+  mPanelLayout.addExtendTextLayout(R.mipmap.marker, "Address", "Caracas, VZLA");
+```
+
 Log
 ----
+v1.8
+
+- Added ExtendTextLayout
+
 v1.7
 
 - Added ValidatorTextLayout
@@ -317,6 +318,6 @@ Inspiration in
 
 Credits
 -------
-For <a href="https://github.com/kyleduo/SwitchButton">SwitchButton</a>
-For <a href="https://github.com/pnikosis/materialish-progress">materialish-progress</a>
+- For <a href="https://github.com/kyleduo/SwitchButton">SwitchButton</a>
+- For <a href="https://github.com/pnikosis/materialish-progress">materialish-progress</a>
 
