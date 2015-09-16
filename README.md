@@ -244,9 +244,7 @@ Add ExtendEditTextLayout
 ```
 Add ExtendValidatorTextLayout
 -------------------
-![ExtendValidatorTextLayoutError](screen/ExtendValidatorTextLayoutError.png)
-
-You can use values String or Text. Use it to validate a search.
+![ExtendValidatorTextLayout](screen/ExtendValidatorTextLayout.png)
 
 ```java
   final ExtendValidatorTextLayout mValidator = mPanelLayout.addExtendValidatorLayout(R.mipmap.message, "Email");
