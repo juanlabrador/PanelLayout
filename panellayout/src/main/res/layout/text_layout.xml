@@ -12,10 +12,9 @@
 
         <TextView
             android:id="@+id/text_label"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:layout_weight="1"
             android:gravity="left|center_vertical"
             android:layout_marginBottom="@dimen/padding_bottom"
             android:layout_marginLeft="@dimen/padding_left"
@@ -33,7 +32,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:layout_weight="1.3"
+            android:layout_weight="1"
             android:gravity="right|center_vertical"
             android:ellipsize="marquee"
             android:singleLine="true"

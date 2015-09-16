@@ -33,7 +33,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:layout_weight="1.3"
+            android:layout_weight="1.5"
             android:background="@null"
             android:singleLine="true"
             android:focusable="true"

@@ -1080,6 +1080,90 @@ public class PanelLayout extends LinearLayout {
     }
 
     /**-------------------------------------------------------------------------*/
+    /**------------------------VALIDATOR TEXT LAYOUT-------------------------------------*/
+
+    /**
+     *
+     * @param label label text
+     * @param content content text
+     * @return ValidatorTextLayout
+     */
+    public ValidatorTextLayout addValidatorLayout(String label, String content) {
+        ValidatorTextLayout mValidatorTextLayout = new ValidatorTextLayout(mContext);
+        mValidatorTextLayout.setLabel(label);
+        mValidatorTextLayout.setContent(content);
+        mValidatorTextLayout.setLabelColor(mDefaultLabelTextColor);
+        mValidatorTextLayout.setContentColor(mDefaultContentTextColor);
+        mValidatorTextLayout.setColorSeparator(mDefaultSeparatorColor);
+        mValidatorTextLayout.setTextSize(mDefaultTextSize);
+
+
+        identifyObject();
+        addField(mValidatorTextLayout);
+
+        return mValidatorTextLayout;
+    }
+
+    /**
+     *
+     * @param label label text
+     * @return ValidatorTextLayout
+     */
+    public ValidatorTextLayout addValidatorLayout(String label) {
+        ValidatorTextLayout mValidatorTextLayout = new ValidatorTextLayout(mContext);
+        mValidatorTextLayout.setLabel(label);
+        mValidatorTextLayout.setLabelColor(mDefaultLabelTextColor);
+        mValidatorTextLayout.setContentColor(mDefaultContentTextColor);
+        mValidatorTextLayout.setColorSeparator(mDefaultSeparatorColor);
+        mValidatorTextLayout.setTextSize(mDefaultTextSize);
+
+        identifyObject();
+        addField(mValidatorTextLayout);
+
+        return mValidatorTextLayout;
+    }
+
+    /**
+     *
+     * @param label label text
+     * @param content content text
+     * @return ValidatorTextLayout
+     */
+    public ValidatorTextLayout addValidatorLayout(int label, String content) {
+        ValidatorTextLayout mValidatorTextLayout = new ValidatorTextLayout(mContext);
+        mValidatorTextLayout.setLabel(label);
+        mValidatorTextLayout.setContent(content);
+        mValidatorTextLayout.setLabelColor(mDefaultLabelTextColor);
+        mValidatorTextLayout.setContentColor(mDefaultContentTextColor);
+        mValidatorTextLayout.setColorSeparator(mDefaultSeparatorColor);
+        mValidatorTextLayout.setTextSize(mDefaultTextSize);
+
+        identifyObject();
+        addField(mValidatorTextLayout);
+
+        return mValidatorTextLayout;
+    }
+
+    /**
+     *
+     * @param label label text
+     * @return ValidatorTextLayout
+     */
+    public ValidatorTextLayout addValidatorLayout(int label) {
+        ValidatorTextLayout mValidatorTextLayout = new ValidatorTextLayout(mContext);
+        mValidatorTextLayout.setLabel(label);
+        mValidatorTextLayout.setLabelColor(mDefaultLabelTextColor);
+        mValidatorTextLayout.setContentColor(mDefaultContentTextColor);
+        mValidatorTextLayout.setColorSeparator(mDefaultSeparatorColor);
+        mValidatorTextLayout.setTextSize(mDefaultTextSize);
+
+        identifyObject();
+        addField(mValidatorTextLayout);
+
+        return mValidatorTextLayout;
+    }
+
+    /**-------------------------------------------------------------------------*/
     /**------------------------GROUP LAYOUT-------------------------------------*/
 
 
@@ -1112,6 +1196,8 @@ public class PanelLayout extends LinearLayout {
             ((ButtonLayout) getLastField()).showSeparator();
         } else if (getLastField() instanceof SwitchLayout) {
             ((SwitchLayout) getLastField()).showSeparator();
+        } else if (getLastField() instanceof ValidatorTextLayout) {
+            ((ValidatorTextLayout) getLastField()).showSeparator();
         }
     }
 

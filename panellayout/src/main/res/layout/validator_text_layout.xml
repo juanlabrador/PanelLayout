@@ -1,39 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:wheel="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical" >
+    android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center_vertical">
+        android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/popup_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:ellipsize="marquee"
-            android:singleLine="true"
-            android:focusable="true"
-            android:focusableInTouchMode="true"
-            android:marqueeRepeatLimit="marquee_forever"
-            android:scrollHorizontally="true"
-            android:gravity="left|center_vertical"
-            android:layout_marginBottom="@dimen/padding_bottom"
-            android:layout_marginLeft="@dimen/padding_left"
-            android:layout_marginTop="@dimen/padding_top"
-            android:layout_marginRight="@dimen/padding_internal_right"/>
-
-        <TextView
-            android:id="@+id/popup_content"
+            android:id="@+id/validator_label"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:layout_weight="1"
+            android:gravity="left|center_vertical"
+            android:layout_marginBottom="@dimen/padding_bottom"
+            android:layout_marginLeft="@dimen/padding_left"
+            android:layout_marginTop="@dimen/padding_top"
+            android:layout_marginRight="@dimen/padding_internal_right"
             android:ellipsize="marquee"
+            android:singleLine="true"
+            android:focusable="false"
+            android:focusableInTouchMode="true"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="true"/>
+
+        <EditText
+            android:id="@+id/validator_content"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1.5"
+            android:background="@null"
+            android:ellipsize="end"
             android:singleLine="true"
             android:focusable="true"
             android:focusableInTouchMode="true"
@@ -43,15 +45,29 @@
             android:layout_marginBottom="@dimen/padding_bottom"
             android:layout_marginLeft="@dimen/padding_internal_left"
             android:layout_marginRight="@dimen/padding_internal_right"
-            android:layout_marginTop="@dimen/padding_top"/>
+            android:layout_marginTop="@dimen/padding_top"
+            android:inputType="text"/>
 
         <ImageView
-            android:id="@+id/popup_button"
+            android:id="@+id/validator_icon"
             android:layout_width="@dimen/size_icon"
             android:layout_height="@dimen/size_icon"
-            android:layout_gravity="center"
             android:gravity="center"
+            android:layout_gravity="center"
             android:layout_marginRight="8dp"/>
+
+        <com.pnikosis.materialishprogress.ProgressWheel
+            android:id="@+id/progress"
+            android:layout_width="@dimen/size_icon"
+            android:layout_height="@dimen/size_icon"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_marginRight="8dp"
+            android:visibility="gone"
+            wheel:matProg_barColor="#CCCCCC"
+            wheel:matProg_barWidth="2dp"
+            wheel:matProg_progressIndeterminate="true" />
+
     </LinearLayout>
 
     <include android:id="@+id/separator" layout="@layout/separator" />
