@@ -213,7 +213,7 @@ You can use values String or Text as parameters, indicate a color when check on,
   mSwitch.setChecked(true);
 ```
 
-Add ValidatorLayout:
+Add ValidatorTextLayout
 -------------------
 
 Use the icons:
