@@ -14,7 +14,7 @@ How to use
 ----------
 
 ```groovy
-compile 'com.github.juanlabrador:panellayout:1.4@aar'
+compile 'com.github.juanlabrador:panellayout:1.6.1@aar'
 ```
 
 In your xml
@@ -182,7 +182,7 @@ You can use values String or Text as parameters, add a text of content and a ico
   mEmail.setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View view) {
-
+            // Intent call phone
       }
   });
   ...
@@ -191,8 +191,33 @@ You can use values String or Text as parameters, add a text of content and a ico
 
 ```
 
+Add SwitchLayout
+----------------
+
+![SwitchLayout](screen/SwitchLayout.png)
+
+You can use values String or Text as parameters, indicate a color when check on, and assign a status to the switch.
+
+```java
+  mPanelLayout.addSwitchLayout("Switch ON Default", true);
+  SwitchLayout mSwitch = mPanelLayout.addSwitchLayout("Switch OFF Default");
+  mPanelLayout.addSwitchLayout("Switch ON Other Color", Color.CYAN, true);
+  ...
+  ...
+  mSwitch.isChecked();
+  mSwitch.setChecked(true);
+```
+
 Log
 ----
+v1.6
+
+- Change Switch Style iOS
+
+v1.6
+
+- Added SwitchLayout
+
 v1.5
 
 - Added ButtonLayout
@@ -234,3 +259,9 @@ Inspiration in
 --------------
 
 <a href="https://github.com/vladexologija/GroupedTextView">GroupedTextView</a>
+
+
+Credits
+-------
+For <a href="https://github.com/kyleduo/SwitchButton">SwitchButton</a>
+
