@@ -14,7 +14,7 @@ How to use
 ----------
 
 ```groovy
-compile 'com.github.juanlabrador:panellayout:1.3@aar'
+compile 'com.github.juanlabrador:panellayout:1.4@aar'
 ```
 
 In your xml
@@ -145,8 +145,34 @@ Add MultiEditTextLayout
   mPanelLayout.addMultiEditTextLayout(R.string.description);
 ```
 
+Add PopupLayout
+---------------
+
+![PopupLayoutEmpty](screen/PopupLayoutEmpty.png)
+![PopupLayoutShowMenu](screen/PopupLayoutShowMenu.png)
+![PopupLayoutFull](screen/PopupLayoutFull.png)
+
+You can use values String or Text. Add a menu of res, or String[] or ArrayList<String>. You can use our standards icons or add your icon.
+
+```java
+  PopupLayout mPopupLayout = mPanelLayout.addPopupLayout("Gender", R.menu.menu_gender);
+
+  mPopupLayout.getContent();  // Get content selected
+  mPopupLayout.getItemPosition();  // Get position item menu
+  ...
+  ...
+  mPanelLayout.addPopupLayout("Country", country);  // With String[]
+  mPanelLayout.addPopupLayout("Age", age);  // With ArrayList
+  mPanelLayout.addPopupLayout("Gender", R.menu.menu_main, GroupLayout.BLACK);
+  mPanelLayout.addPopupLayout("Gender", R.menu.menu_main, R.drawable.youricon);
+```
+
 Log
 ----
+v1.4
+
+- Added PopupLayout
+
 v1.3
 
 - Added MultiEditTextLayout

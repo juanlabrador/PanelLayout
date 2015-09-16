@@ -37,10 +37,6 @@ public class PanelLayout extends LinearLayout {
     private int mDefaultContentTextColor = Color.GRAY;
     private int mDefaultTextSize = 14;
 
-    // Popup icon
-    public static final int GRAY = R.drawable.next_gray;
-    public static final int BLACK = R.drawable.next_black;
-
 
     public PanelLayout(Context context, AttributeSet attrs) {
         super(context, attrs);
@@ -351,7 +347,7 @@ public class PanelLayout extends LinearLayout {
         mPopupLayout.setLabel(label);
         mPopupLayout.setContent(content);
         mPopupLayout.setMenu(menu);
-        mPopupLayout.setIcon(GRAY);
+        mPopupLayout.setIcon(R.drawable.next_gray);
         mPopupLayout.setLabelColor(mDefaultLabelTextColor);
         mPopupLayout.setContentColor(mDefaultContentTextColor);
         mPopupLayout.setColorSeparator(mDefaultSeparatorColor);
@@ -384,7 +380,7 @@ public class PanelLayout extends LinearLayout {
         PopupLayout mPopupLayout = new PopupLayout(mContext);
         mPopupLayout.setLabel(label);
         mPopupLayout.setMenu(menu);
-        mPopupLayout.setIcon(GRAY);
+        mPopupLayout.setIcon(R.drawable.next_gray);
         mPopupLayout.setLabelColor(mDefaultLabelTextColor);
         mPopupLayout.setContentColor(mDefaultContentTextColor);
         mPopupLayout.setColorSeparator(mDefaultSeparatorColor);
@@ -417,7 +413,7 @@ public class PanelLayout extends LinearLayout {
         mPopupLayout.setLabel(label);
         mPopupLayout.setContent(content);
         mPopupLayout.setMenu(menu);
-        mPopupLayout.setIcon(GRAY);
+        mPopupLayout.setIcon(R.drawable.next_gray);
         mPopupLayout.setLabelColor(mDefaultLabelTextColor);
         mPopupLayout.setContentColor(mDefaultContentTextColor);
         mPopupLayout.setColorSeparator(mDefaultSeparatorColor);
@@ -484,7 +480,7 @@ public class PanelLayout extends LinearLayout {
         PopupLayout mPopupLayout = new PopupLayout(mContext);
         mPopupLayout.setLabel(label);
         mPopupLayout.setMenu(menu);
-        mPopupLayout.setIcon(GRAY);
+        mPopupLayout.setIcon(R.drawable.next_gray);
         mPopupLayout.setLabelColor(mDefaultLabelTextColor);
         mPopupLayout.setContentColor(mDefaultContentTextColor);
         mPopupLayout.setColorSeparator(mDefaultSeparatorColor);
@@ -500,7 +496,7 @@ public class PanelLayout extends LinearLayout {
         PopupLayout mPopupLayout = new PopupLayout(mContext);
         mPopupLayout.setLabel(label);
         mPopupLayout.setCustomMenu(menu);
-        mPopupLayout.setIcon(GRAY);
+        mPopupLayout.setIcon(R.drawable.next_gray);
         mPopupLayout.setLabelColor(mDefaultLabelTextColor);
         mPopupLayout.setContentColor(mDefaultContentTextColor);
         mPopupLayout.setColorSeparator(mDefaultSeparatorColor);
@@ -517,7 +513,7 @@ public class PanelLayout extends LinearLayout {
         PopupLayout mPopupLayout = new PopupLayout(mContext);
         mPopupLayout.setLabel(label);
         mPopupLayout.setCustomMenu(menu);
-        mPopupLayout.setIcon(GRAY);
+        mPopupLayout.setIcon(R.drawable.next_gray);
         mPopupLayout.setLabelColor(mDefaultLabelTextColor);
         mPopupLayout.setContentColor(mDefaultContentTextColor);
         mPopupLayout.setColorSeparator(mDefaultSeparatorColor);
@@ -565,7 +561,7 @@ public class PanelLayout extends LinearLayout {
         PopupLayout mPopupLayout = new PopupLayout(mContext);
         mPopupLayout.setLabel(label);
         mPopupLayout.setCustomMenu(menu);
-        mPopupLayout.setIcon(GRAY);
+        mPopupLayout.setIcon(R.drawable.next_gray);
         mPopupLayout.setLabelColor(mDefaultLabelTextColor);
         mPopupLayout.setContentColor(mDefaultContentTextColor);
         mPopupLayout.setColorSeparator(mDefaultSeparatorColor);
@@ -582,7 +578,7 @@ public class PanelLayout extends LinearLayout {
         PopupLayout mPopupLayout = new PopupLayout(mContext);
         mPopupLayout.setLabel(label);
         mPopupLayout.setCustomMenu(menu);
-        mPopupLayout.setIcon(GRAY);
+        mPopupLayout.setIcon(R.drawable.next_gray);
         mPopupLayout.setLabelColor(mDefaultLabelTextColor);
         mPopupLayout.setContentColor(mDefaultContentTextColor);
         mPopupLayout.setColorSeparator(mDefaultSeparatorColor);
@@ -656,3 +652,4 @@ public class PanelLayout extends LinearLayout {
     }
 
 }
+
