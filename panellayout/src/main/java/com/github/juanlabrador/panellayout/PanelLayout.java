@@ -37,6 +37,9 @@ public class PanelLayout extends LinearLayout {
     private int mDefaultContentTextColor = Color.GRAY;
     private int mDefaultTextSize = 14;
 
+    // Extend Text Attributes
+    private int mDefaultExtendLabelTextColor = Color.GRAY;
+    private int mDefaultExtendContentTextColor = Color.BLACK;
 
     public PanelLayout(Context context, AttributeSet attrs) {
         super(context, attrs);
@@ -63,6 +66,11 @@ public class PanelLayout extends LinearLayout {
 
         mDefaultLabelTextColor = attrsArray.getColor(R.styleable.GroupLayoutAttrs_labelTextColor, mDefaultLabelTextColor);
         mDefaultContentTextColor = attrsArray.getColor(R.styleable.GroupLayoutAttrs_contentTextColor, mDefaultContentTextColor);
+
+        mDefaultExtendLabelTextColor = attrsArray.getColor(R.styleable.GroupLayoutAttrs_labelTextColor, mDefaultExtendLabelTextColor);
+        mDefaultExtendContentTextColor = attrsArray.getColor(R.styleable.GroupLayoutAttrs_contentTextColor, mDefaultExtendContentTextColor);
+
+
         mDefaultTextSize = attrsArray.getDimensionPixelSize(R.styleable.GroupLayoutAttrs_textSizeLayout,
                 getResources().getDimensionPixelSize(R.dimen.size_text));
 
@@ -1164,6 +1172,55 @@ public class PanelLayout extends LinearLayout {
     }
 
     /**-------------------------------------------------------------------------*/
+    /**------------------------EXTEND TEXT LAYOUT-------------------------------------*/
+
+    /**
+     *
+     * @param icon
+     * @param label
+     * @param content
+     * @return ExtendTextLayout
+     */
+    public ExtendTextLayout addExtendTextLayout(int icon, String label, String content) {
+        ExtendTextLayout mExtendTextLayout = new ExtendTextLayout(mContext);
+        mExtendTextLayout.setLabel(label);
+        mExtendTextLayout.setIcon(icon);
+        mExtendTextLayout.setContent(content);
+        mExtendTextLayout.setLabelColor(mDefaultExtendLabelTextColor);
+        mExtendTextLayout.setContentColor(mDefaultExtendContentTextColor);
+        mExtendTextLayout.setColorSeparator(mDefaultSeparatorColor);
+        mExtendTextLayout.setTextSize(mDefaultTextSize);
+
+        identifyObject();
+        addField(mExtendTextLayout);
+
+        return mExtendTextLayout;
+    }
+
+    /**
+     *
+     * @param icon
+     * @param label
+     * @param content
+     * @return ExtendTextLayout
+     */
+    public ExtendTextLayout addExtendTextLayout(int icon, int label, String content) {
+        ExtendTextLayout mExtendTextLayout = new ExtendTextLayout(mContext);
+        mExtendTextLayout.setLabel(label);
+        mExtendTextLayout.setIcon(icon);
+        mExtendTextLayout.setContent(content);
+        mExtendTextLayout.setLabelColor(mDefaultExtendLabelTextColor);
+        mExtendTextLayout.setContentColor(mDefaultExtendContentTextColor);
+        mExtendTextLayout.setColorSeparator(mDefaultSeparatorColor);
+        mExtendTextLayout.setTextSize(mDefaultTextSize);
+
+        identifyObject();
+        addField(mExtendTextLayout);
+
+        return mExtendTextLayout;
+    }
+
+    /**-------------------------------------------------------------------------*/
     /**------------------------GROUP LAYOUT-------------------------------------*/
 
 
@@ -1198,6 +1255,8 @@ public class PanelLayout extends LinearLayout {
             ((SwitchLayout) getLastField()).showSeparator();
         } else if (getLastField() instanceof ValidatorTextLayout) {
             ((ValidatorTextLayout) getLastField()).showSeparator();
+        } else if (getLastField() instanceof ExtendTextLayout) {
+            ((ExtendTextLayout) getLastField()).showSeparator();
         }
     }
 
