@@ -175,10 +175,6 @@ public class GroupLayout extends LinearLayout {
         return mTextLayout;
     }
 
-    public TextLayout getTextLayoutAt(int index) {
-        return (TextLayout) mItemContent.getChildAt(index);
-    }
-
     /**-------------------------------------------------------------------------*/
     /**------------------------EDIT TEXT LAYOUT---------------------------------*/
 
@@ -240,9 +236,36 @@ public class GroupLayout extends LinearLayout {
         return mEditTextLayout;
     }
 
-    public EditTextLayout getEditTextLayoutAt(int index) {
-        return (EditTextLayout) mItemContent.getChildAt(index);
+    /**-------------------------------------------------------------------------*/
+    /**------------------------MULTI TEXT LAYOUT---------------------------------*/
+
+
+    public MultiTextLayout addMultiTextLayout(int content) {
+        MultiTextLayout mMultiTextLayout = new MultiTextLayout(mContext);
+        mMultiTextLayout.setContent(content);
+        mMultiTextLayout.setContentColor(mDefaultLabelTextColor);
+        mMultiTextLayout.setColorSeparator(mDefaultSeparatorColor);
+        mMultiTextLayout.setTextSize(mDefaultTextSize);
+
+        identifyObject();
+        addField(mMultiTextLayout);
+
+        return mMultiTextLayout;
     }
+
+    public MultiTextLayout addMultiTextLayout(String content) {
+        MultiTextLayout mMultiTextLayout = new MultiTextLayout(mContext);
+        mMultiTextLayout.setContent(content);
+        mMultiTextLayout.setContentColor(mDefaultLabelTextColor);
+        mMultiTextLayout.setColorSeparator(mDefaultSeparatorColor);
+        mMultiTextLayout.setTextSize(mDefaultTextSize);
+
+        identifyObject();
+        addField(mMultiTextLayout);
+
+        return mMultiTextLayout;
+    }
+
 
     /**-------------------------------------------------------------------------*/
     /**------------------------GROUP LAYOUT---------------------------------*/
@@ -263,6 +286,8 @@ public class GroupLayout extends LinearLayout {
             ((TextLayout) getLastField()).showSeparator();
         } else if (getLastField() instanceof EditTextLayout) {
             ((EditTextLayout) getLastField()).showSeparator();
+        } else if (getLastField() instanceof MultiTextLayout) {
+            ((MultiTextLayout) getLastField()).showSeparator();
         }
     }
 

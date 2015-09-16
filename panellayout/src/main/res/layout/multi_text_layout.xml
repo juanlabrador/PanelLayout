@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/multi_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:focusable="false"
+        android:layout_marginBottom="@dimen/padding_bottom"
+        android:layout_marginLeft="@dimen/padding_left"
+        android:layout_marginTop="@dimen/padding_top"
+        android:layout_marginRight="@dimen/padding_right"/>
+
+    <include 
+        android:id="@+id/separator" 
+        layout="@layout/separator" />
+
+</LinearLayout>
