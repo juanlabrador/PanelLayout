@@ -1,5 +1,5 @@
 # PanelLayout  [ ![Download](https://api.bintray.com/packages/juanlabrador/maven/PanelLayout/images/download.svg) ](https://bintray.com/juanlabrador/maven/PanelLayout/_latestVersion)
-A group of view in container to style iOS 7. For API 21+
+A group of view in container to style iOS 7. For API 16+
 
 
 Description
@@ -9,12 +9,17 @@ Description
 - EditTextLayout: Consisting of one TextView and one EditText.
 - MultiTextLayout: Consisting of one TextView to display large text.
 - MultiEditTextLayout: Consisting of one EditText to write large text.
+- SwitchLayout: Consisting of one label and a switch for control of State.
+- ButtonLayout: Consisting of two TextView and one ImageView for to do an action click.
+- PopupLayout: Consisting of two TextView and one ImageView for to do an action popup menu.
+- ValidatorTextLayout: Consisting of one TextVIew and one EditText, with Icon + popup message.
+
 
 How to use
 ----------
 
 ```groovy
-compile 'com.github.juanlabrador:panellayout:1.6.1@aar'
+compile 'com.github.juanlabrador:panellayout:1.7@aar'
 ```
 
 In your xml
@@ -208,8 +213,57 @@ You can use values String or Text as parameters, indicate a color when check on,
   mSwitch.setChecked(true);
 ```
 
+Add ValidatorLayout:
+-------------------
+
+Use the icons:
+
+- dataProgress(); Working validation view
+![ValidatorTextLayoutProgress](screen/ValidatorTextLayoutProgress.png)
+
+- dataCheck(); Check text
+![ValidatorTextLayoutCheck](screen/ValidatorTextLayoutCheck.png)
+
+- dataError(); Error in text input
+![ValidatorTextLayoutError](screen/ValidatorTextLayoutError.png)
+
+- dataError("Email invalidate!");  Show message with popup
+![ValidatorTextLayoutPopup](screen/ValidatorTextLayoutPopup.png)
+
+You can use values String or Text. Use it to validate a search.
+
+```java
+  final ValidatorTextLayout mValidator = mPanelLayout2.addValidatorLayout("Email");
+  mValidator.addTextChangedListener(new TextWatcher() {
+      @Override
+      public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+      }
+
+      @Override
+      public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+      }
+
+      @Override
+      public void afterTextChanged(Editable editable) {
+          if (Condition correct) {
+              mValidator.dataCheck();
+          } else if (Condition error) {
+              mValidator.dataError();
+          } else {
+              mValidator.dataProgress();
+          }
+      }
+  });
+```
+
 Log
 ----
+v1.7
+
+- Added ValidatorTextLayout
+
 v1.6
 
 - Change Switch Style iOS
@@ -264,4 +318,5 @@ Inspiration in
 Credits
 -------
 For <a href="https://github.com/kyleduo/SwitchButton">SwitchButton</a>
+For <a href="https://github.com/pnikosis/materialish-progress">materialish-progress</a>
 
