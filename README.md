@@ -239,15 +239,6 @@ Add ExtendEditTextLayout
 
 ![ExtendEditTextLayout](screen/ExtendEditTextLayout.png)
 
-You can use values String or Text as parameters, add too a InputType.
-
-```java
-  mPanelLayout.addEditTextLayout("Username");
-  mPanelLayout.addEditTextLayout("Password");
-```
-
-To edit the label or content, you need to declare a EditTextLayout object:
-
 ```java
   mPanelLayout.addExtendEditTextLayout(R.mipmap.marker, "Address");
 ```
