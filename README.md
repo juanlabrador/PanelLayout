@@ -117,8 +117,10 @@ To edit the label or content, you need to declare a EditTextLayout object:
 ```java
   EditTextLayout mPassword = mPanelLayout.addEditTextLayout("Password");
 
-  mPassword.isPassword(true);  // Change input type
+  mPassword.isPassword(true);  // Change input type to password
 
+  mPhone.isNumber(true);   // Change input type to number
+  mEmail.isEmail(true);   // Change input type to email
 ```
 Add MultiTextLayout
 -------------------
@@ -167,8 +169,34 @@ You can use values String or Text. Add a menu of res, or String[] or ArrayList<S
   mPanelLayout.addPopupLayout("Gender", R.menu.menu_main, R.drawable.youricon);
 ```
 
+Add ButtonLayout
+----------------
+
+![ButtonLayout](screen/ButtonLayout.png)
+
+You can use values String or Text as parameters, add a text of content and a icon.
+
+```java
+  mPanelLayout.addButtonLayout("Phone", "+ 58 424 0000000", R.mipmap.phone);
+  ButtonLayout mEmail = mPanelLayout.addButtonLayout("Email", "juanjavierlabrador@gmail.com", R.mipmap.message);
+  mEmail.setOnClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View view) {
+
+      }
+  });
+  ...
+  ...
+  mEmail.getContent();
+
+```
+
 Log
 ----
+v1.5
+
+- Added ButtonLayout
+
 v1.4
 
 - Added PopupLayout
