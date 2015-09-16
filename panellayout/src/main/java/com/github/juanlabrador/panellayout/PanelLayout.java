@@ -1221,6 +1221,97 @@ public class PanelLayout extends LinearLayout {
     }
 
     /**-------------------------------------------------------------------------*/
+    /**------------------------EXTEND EDIT TEXT LAYOUT-------------------------------------*/
+
+    /**
+     *
+     * @param icon
+     * @param label
+     * @return ExtendEditTextLayout
+     */
+    public ExtendEditTextLayout addExtendEditTextLayout(int icon, String label) {
+        ExtendEditTextLayout mExtendEditTextLayout = new ExtendEditTextLayout(mContext);
+        mExtendEditTextLayout.setLabel(label);
+        mExtendEditTextLayout.setIcon(icon);
+        mExtendEditTextLayout.setLabelColor(mDefaultContentTextColor);
+        mExtendEditTextLayout.setContentColor(mDefaultLabelTextColor);
+        mExtendEditTextLayout.setColorSeparator(mDefaultSeparatorColor);
+        mExtendEditTextLayout.setTextSize(mDefaultTextSize);
+
+        identifyObject();
+        addField(mExtendEditTextLayout);
+
+        return mExtendEditTextLayout;
+    }
+
+    /**
+     *
+     * @param icon
+     * @param label
+     * @return ExtendEditTextLayout
+     */
+    public ExtendEditTextLayout addExtendEditTextLayout(int icon, int label) {
+        ExtendEditTextLayout mExtendEditTextLayout = new ExtendEditTextLayout(mContext);
+        mExtendEditTextLayout.setLabel(label);
+        mExtendEditTextLayout.setIcon(icon);
+        mExtendEditTextLayout.setLabelColor(mDefaultContentTextColor);
+        mExtendEditTextLayout.setContentColor(mDefaultLabelTextColor);
+        mExtendEditTextLayout.setColorSeparator(mDefaultSeparatorColor);
+        mExtendEditTextLayout.setTextSize(mDefaultTextSize);
+
+        identifyObject();
+        addField(mExtendEditTextLayout);
+
+        return mExtendEditTextLayout;
+    }
+
+    /**
+     *
+     * @param icon
+     * @param label
+     * @param content
+     * @return ExtendEditTextLayout
+     */
+    public ExtendEditTextLayout addExtendEditTextLayout(int icon, String label, String content) {
+        ExtendEditTextLayout mExtendEditTextLayout = new ExtendEditTextLayout(mContext);
+        mExtendEditTextLayout.setLabel(label);
+        mExtendEditTextLayout.setIcon(icon);
+        mExtendEditTextLayout.setContent(content);
+        mExtendEditTextLayout.setLabelColor(mDefaultContentTextColor);
+        mExtendEditTextLayout.setContentColor(mDefaultLabelTextColor);
+        mExtendEditTextLayout.setColorSeparator(mDefaultSeparatorColor);
+        mExtendEditTextLayout.setTextSize(mDefaultTextSize);
+
+        identifyObject();
+        addField(mExtendEditTextLayout);
+
+        return mExtendEditTextLayout;
+    }
+
+    /**
+     *
+     * @param icon
+     * @param label
+     * @param content
+     * @return ExtendEditTextLayout
+     */
+    public ExtendEditTextLayout addExtendEditTextLayout(int icon, int label, String content) {
+        ExtendEditTextLayout mExtendEditTextLayout = new ExtendEditTextLayout(mContext);
+        mExtendEditTextLayout.setLabel(label);
+        mExtendEditTextLayout.setIcon(icon);
+        mExtendEditTextLayout.setContent(content);
+        mExtendEditTextLayout.setLabelColor(mDefaultContentTextColor);
+        mExtendEditTextLayout.setContentColor(mDefaultLabelTextColor);
+        mExtendEditTextLayout.setColorSeparator(mDefaultSeparatorColor);
+        mExtendEditTextLayout.setTextSize(mDefaultTextSize);
+
+        identifyObject();
+        addField(mExtendEditTextLayout);
+
+        return mExtendEditTextLayout;
+    }
+
+    /**-------------------------------------------------------------------------*/
     /**------------------------GROUP LAYOUT-------------------------------------*/
 
 
@@ -1257,6 +1348,8 @@ public class PanelLayout extends LinearLayout {
             ((ValidatorTextLayout) getLastField()).showSeparator();
         } else if (getLastField() instanceof ExtendTextLayout) {
             ((ExtendTextLayout) getLastField()).showSeparator();
+        } else if (getLastField() instanceof ExtendEditTextLayout) {
+            ((ExtendEditTextLayout) getLastField()).showSeparator();
         }
     }
 

@@ -5,14 +5,12 @@ A group of view in container to style iOS 7. For API 19+
 
 How to use
 ----------
-
 ```groovy
-compile 'com.github.juanlabrador:panellayout:1.8@aar'
+compile 'com.github.juanlabrador:panellayout:1.9@aar'
 ```
 
 In your xml
 -----------
-
 ```xml
   <com.github.juanlabrador.panellayout.PanelLayout
       android:id="@+id/group"
@@ -42,8 +40,7 @@ Then, you must add this line to apply them
       android:id="@+id/group"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      panel:textSizeLayout="16sp"
-      panel:withBorder="true"/>
+      panel:textSizeLayout="16sp"/>
 ```
 
 By default:
@@ -58,7 +55,6 @@ By default:
 
 In your class java
 ------------------
-
 You declare a PanelLayout object:
 
 ```java
@@ -68,10 +64,8 @@ You declare a PanelLayout object:
   mPanelLayout = (PanelLayout) findViewById(R.id.group);
 
 ```
-
 Add TextLayout
 --------------
-
 ![TextLayout](screen/TextLayout.png)
 
 You can use values String or Text as parameters.
@@ -92,10 +86,8 @@ To edit the label or content, you need to declare a TextLayout object:
   mName.setLabel("Last Name");
   mName.setContent("Labrador");
 ```
-
 Add EditTextLayout
 -----------------
-
 ![EditTextLayout](screen/EditTextLayout.png)
 
 You can use values String or Text as parameters, add too a InputType.
@@ -117,7 +109,6 @@ To edit the label or content, you need to declare a EditTextLayout object:
 ```
 Add MultiTextLayout
 -------------------
-
 ![MultiTextLayout](screen/MultiTextLayout.png)
 
 ```java
@@ -129,7 +120,6 @@ When you do to long press, you copy content to Clipboard.
 
 Add MultiEditTextLayout
 -----------------------
-
 ![MultiEditTextLayoutEmpty](screen/MultiEditTextLayoutEmpty.png)
 ![MultiEditTextLayoutFull](screen/MultiEditTextLayoutFull.png)
 
@@ -139,10 +129,8 @@ Add MultiEditTextLayout
 ```java
   mPanelLayout.addMultiEditTextLayout(R.string.description);
 ```
-
 Add PopupLayout
 ---------------
-
 ![PopupLayoutEmpty](screen/PopupLayoutEmpty.png)
 ![PopupLayoutShowMenu](screen/PopupLayoutShowMenu.png)
 ![PopupLayoutFull](screen/PopupLayoutFull.png)
@@ -161,10 +149,8 @@ You can use values String or Text. Add a menu of res, or String[] or ArrayList<S
   mPanelLayout.addPopupLayout("Gender", R.menu.menu_main, GroupLayout.BLACK);
   mPanelLayout.addPopupLayout("Gender", R.menu.menu_main, R.drawable.youricon);
 ```
-
 Add ButtonLayout
 ----------------
-
 ![ButtonLayout](screen/ButtonLayout.png)
 
 You can use values String or Text as parameters, add a text of content and a icon.
@@ -183,10 +169,8 @@ You can use values String or Text as parameters, add a text of content and a ico
   mEmail.getContent();
 
 ```
-
 Add SwitchLayout
 ----------------
-
 ![SwitchLayout](screen/SwitchLayout.png)
 
 You can use values String or Text as parameters, indicate a color when check on, and assign a status to the switch.
@@ -200,10 +184,8 @@ You can use values String or Text as parameters, indicate a color when check on,
   mSwitch.isChecked();
   mSwitch.setChecked(true);
 ```
-
 Add ValidatorTextLayout
 -------------------
-
 Use the icons:
 
 - dataProgress(); Working validation view
@@ -245,63 +227,70 @@ You can use values String or Text. Use it to validate a search.
       }
   });
 ```
-
 Add ExtendTextLayout
 --------------------
-
 ![ExtendTextLayout](screen/ExtendTextLayout.png)
 
 ```java
   mPanelLayout.addExtendTextLayout(R.mipmap.marker, "Address", "Caracas, VZLA");
 ```
+Add ExtendEditTextLayout
+-----------------
 
+![ExtendEditTextLayout](screen/ExtendEditTextLayout.png)
+
+You can use values String or Text as parameters, add too a InputType.
+
+```java
+  mPanelLayout.addEditTextLayout("Username");
+  mPanelLayout.addEditTextLayout("Password");
+```
+
+To edit the label or content, you need to declare a EditTextLayout object:
+
+```java
+  mPanelLayout.addExtendEditTextLayout(R.mipmap.marker, "Address");
+```
 Log
 ----
-v1.8
+v1.9
+- Added ExtendEditTextLayout
+    - Added isURL(boolean);
 
+v1.8
 - Added ExtendTextLayout
 
 v1.7
-
 - Added ValidatorTextLayout
 
-v1.6
-
+v1.6.1
 - Change Switch Style iOS
 
 v1.6
-
 - Added SwitchLayout
 
 v1.5
-
 - Added ButtonLayout
 
 v1.4
-
 - Added PopupLayout
 
 v1.3
-
 - Added MultiEditTextLayout
 
 v1.2
-
 - Added MultiTextLayout
 
 v1.1.1
-
 - Updated EditTextLayout
     - isNumber(boolean)
     - isEmail(boolean)
 
 v1.1
-
 - Added EditTextLayout
     - isPassword(boolean)
 
 v1.0
-
 - Added TextLayout
 
 Developed by

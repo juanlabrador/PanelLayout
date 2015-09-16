@@ -74,8 +74,8 @@ public class ExtendTextLayout extends LinearLayout {
 
     private void initialize() {
         mLayoutInflater.inflate(R.layout.extend_text_layout, this);
-        mLabel = (TextView) findViewById(R.id.vertical_text_label);
-        mContent = (TextView) findViewById(R.id.vertical_content_text);
+        mLabel = (TextView) findViewById(R.id.extend_text_label);
+        mContent = (TextView) findViewById(R.id.extend_content_text);
         mIcon = (ImageView) findViewById(R.id.icon);
         mSeparator = findViewById(R.id.separator);
         mSeparator.setVisibility(View.GONE);

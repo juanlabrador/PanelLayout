@@ -1,32 +1,36 @@
 package com.github.juanlabrador.panellayout;
 
 import android.content.Context;
-import android.text.Editable;
 import android.text.InputFilter;
 import android.text.InputType;
 import android.text.TextWatcher;
 import android.util.TypedValue;
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 /**
- * Created by juanlabrador on 15/09/15.
+ * Created by juanlabrador on 16/09/15.
  */
-public class EditTextLayout extends LinearLayout implements View.OnFocusChangeListener {
+public class ExtendEditTextLayout extends LinearLayout {
 
     private LayoutInflater mInflater;
     private TextView mLabel;
     private EditText mContent;
+    private ImageView mIcon;
     private View mSeparator;
 
-    public EditTextLayout(Context context) {
+    public ExtendEditTextLayout(Context context) {
         super(context);
         mInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         initialize();
+    }
+
+    public void setIcon(int icon) {
+        mIcon.setImageResource(icon);
     }
 
     public void setLabel(String text){
@@ -72,19 +76,6 @@ public class EditTextLayout extends LinearLayout implements View.OnFocusChangeLi
         mSeparator.setBackgroundColor(color);
     }
 
-    private void initialize() {
-        mInflater.inflate(R.layout.edit_text_layout, this);
-        mLabel = (TextView) findViewById(R.id.edit_text_label);
-        mContent = (EditText) findViewById(R.id.edit_text_content);
-        mContent.setOnFocusChangeListener(this);
-        mSeparator = findViewById(R.id.separator);
-        mSeparator.setVisibility(View.GONE);
-    }
-
-    public String getContent() {
-        return mContent.getText().toString();
-    }
-
     public void isPassword(boolean b) {
         if (b)
             mContent.setInputType(InputType.TYPE_CLASS_TEXT|InputType.TYPE_TEXT_VARIATION_PASSWORD);
@@ -113,30 +104,33 @@ public class EditTextLayout extends LinearLayout implements View.OnFocusChangeLi
             mContent.setInputType(InputType.TYPE_CLASS_TEXT);
     }
 
-    public EditText getEditText() {
-        return mContent;
-    }
-
     public void addTextChangedListener(TextWatcher textWatcher) {
         mContent.addTextChangedListener(textWatcher);
     }
 
+    private void initialize() {
+        mInflater.inflate(R.layout.extend_edit_text_layout, this);
+        mLabel = (TextView) findViewById(R.id.extend_text_label);
+        mContent = (EditText) findViewById(R.id.extend_edit_text_content);
+        mIcon = (ImageView) findViewById(R.id.icon);
+        mSeparator = findViewById(R.id.separator);
+        mSeparator.setVisibility(View.GONE);
+    }
+
+    public String getContent() {
+        return mContent.getText().toString();
+    }
+
+    public EditText getEditText() {
+        return mContent;
+    }
+
     @Override
     public boolean equals(Object o) {
-        if (!(o instanceof EditTextLayout)){
+        if (!(o instanceof ExtendEditTextLayout)){
             return false;
         } else {
             return true;
         }
     }
-
-    @Override
-    public void onFocusChange(View view, boolean b) {
-        if (!b) {
-            mContent.setGravity(Gravity.RIGHT | Gravity.CENTER_VERTICAL);
-        } else {
-            mContent.setGravity(Gravity.LEFT | Gravity.CENTER_VERTICAL);
-        }
-    }
-
 }
