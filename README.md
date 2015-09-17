@@ -277,15 +277,15 @@ Add ExtendPopupLayout
 You can use values String or Text. Add a menu of res, or String[] or ArrayList<String>. You can use our standards icons or add your icon.
 
 ```java
-  PopupLayout mPopupLayout = mPanelLayout.addPopupLayout(R.mipmap.gender, "Gender", R.menu.menu_gender);
+  ExtendPopupLayout mPopupLayout = mPanelLayout.addExtendPopupLayout(R.mipmap.gender, "Gender", R.menu.menu_gender);
 
   mPopupLayout.getContent();  // Get content selected
   mPopupLayout.getItemPosition();  // Get position item menu
   ...
   ...
-  mPanelLayout.addPopupLayout("Country", country);  // With String[]
-  mPanelLayout.addPopupLayout("Age", age);  // With ArrayList
-  mPanelLayout.addPopupLayout("Gender", R.menu.menu_main, R.drawable.youricon);
+  mPanelLayout.addExtendPopupLayout(R.mipmap.gender, "Gender", gender);  // With String[]
+  mPanelLayout.addExtendPopupLayout(R.mipmap.gender, "Gender", gender); // With ArrayList
+  mPanelLayout.addExtendPopupLayout(R.mipmap.gender, "Gender", R.menu.menu_main, R.drawable.youricon);
 ```
 Log
 ----
