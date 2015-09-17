@@ -6,7 +6,7 @@ A group of view in container to style iOS 7. For API 19+
 How to use
 ----------
 ```groovy
-compile 'com.github.juanlabrador:panellayout:2.0@aar'
+compile 'com.github.juanlabrador:panellayout:2.1@aar'
 ```
 
 In your xml
@@ -146,7 +146,6 @@ You can use values String or Text. Add a menu of res, or String[] or ArrayList<S
   ...
   mPanelLayout.addPopupLayout("Country", country);  // With String[]
   mPanelLayout.addPopupLayout("Age", age);  // With ArrayList
-  mPanelLayout.addPopupLayout("Gender", R.menu.menu_main, GroupLayout.BLACK);
   mPanelLayout.addPopupLayout("Gender", R.menu.menu_main, R.drawable.youricon);
 ```
 Add ButtonLayout
@@ -271,8 +270,28 @@ Add ExtendValidatorTextLayout
       }
   });
 ```
+Add ExtendPopupLayout
+---------------
+![ExtendPopupLayout](screen/ExtendPopupLayout.png)
+
+You can use values String or Text. Add a menu of res, or String[] or ArrayList<String>. You can use our standards icons or add your icon.
+
+```java
+  PopupLayout mPopupLayout = mPanelLayout.addPopupLayout(R.mipmap.gender, "Gender", R.menu.menu_gender);
+
+  mPopupLayout.getContent();  // Get content selected
+  mPopupLayout.getItemPosition();  // Get position item menu
+  ...
+  ...
+  mPanelLayout.addPopupLayout("Country", country);  // With String[]
+  mPanelLayout.addPopupLayout("Age", age);  // With ArrayList
+  mPanelLayout.addPopupLayout("Gender", R.menu.menu_main, R.drawable.youricon);
+```
 Log
 ----
+v2.1
+- Added ExtendPopupLayout
+
 v2.0
 - Added ExtendValidatorTextLayout
 

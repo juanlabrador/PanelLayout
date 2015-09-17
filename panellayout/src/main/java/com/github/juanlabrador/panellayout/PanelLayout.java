@@ -1380,6 +1380,211 @@ public class PanelLayout extends LinearLayout {
     }
 
     /**-------------------------------------------------------------------------*/
+    /**------------------------EXTEND POPUP LAYOUT-------------------------------------*/
+
+    /**
+     *
+     * @param icon icon
+     * @param label label
+     * @param content content
+     * @param menu menu
+     * @return ExtendPopupLayout
+     */
+    public ExtendPopupLayout addExtendPopupLayout(int icon, int label, String content, int menu) {
+        ExtendPopupLayout mExtendPopupLayout = new ExtendPopupLayout(mContext);
+        mExtendPopupLayout.setLabel(label);
+        mExtendPopupLayout.setContent(content);
+        mExtendPopupLayout.setMenu(menu);
+        mExtendPopupLayout.setIcon(icon);
+        mExtendPopupLayout.setIconButton(R.drawable.next_gray);
+        mExtendPopupLayout.setLabelColor(mDefaultContentTextColor);
+        mExtendPopupLayout.setContentColor(mDefaultLabelTextColor);
+        mExtendPopupLayout.setColorSeparator(mDefaultSeparatorColor);
+        mExtendPopupLayout.setTextSize(mDefaultTextSize);
+
+        identifyObject();
+        addField(mExtendPopupLayout);
+
+        return mExtendPopupLayout;
+    }
+
+    /**
+     *
+     * @param icon icon
+     * @param label label
+     * @param content content
+     * @param menu menu
+     * @param iconButton iconButton
+     * @return ExtendPopupLayout
+     */
+    public ExtendPopupLayout addExtendPopupLayout(int icon, int label, String content, int menu, int iconButton) {
+        ExtendPopupLayout mExtendPopupLayout = new ExtendPopupLayout(mContext);
+        mExtendPopupLayout.setLabel(label);
+        mExtendPopupLayout.setContent(content);
+        mExtendPopupLayout.setIcon(icon);
+        mExtendPopupLayout.setIconButton(iconButton);
+        mExtendPopupLayout.setMenu(menu);
+        mExtendPopupLayout.setLabelColor(mDefaultContentTextColor);
+        mExtendPopupLayout.setContentColor(mDefaultLabelTextColor);
+        mExtendPopupLayout.setColorSeparator(mDefaultSeparatorColor);
+        mExtendPopupLayout.setTextSize(mDefaultTextSize);
+
+        identifyObject();
+        addField(mExtendPopupLayout);
+
+        return mExtendPopupLayout;
+    }
+
+    /**
+     *
+     * @param icon icon
+     * @param label label
+     * @param menu menu
+     * @return ExtendPopupLayout
+     */
+    public ExtendPopupLayout addExtendPopupLayout(int icon, int label, int menu) {
+        ExtendPopupLayout mExtendPopupLayout = new ExtendPopupLayout(mContext);
+        mExtendPopupLayout.setLabel(label);
+        mExtendPopupLayout.setMenu(menu);
+        mExtendPopupLayout.setIcon(icon);
+        mExtendPopupLayout.setIconButton(R.drawable.next_gray);
+        mExtendPopupLayout.setLabelColor(mDefaultContentTextColor);
+        mExtendPopupLayout.setContentColor(mDefaultLabelTextColor);
+        mExtendPopupLayout.setColorSeparator(mDefaultSeparatorColor);
+        mExtendPopupLayout.setTextSize(mDefaultTextSize);
+
+        identifyObject();
+        addField(mExtendPopupLayout);
+
+        return mExtendPopupLayout;
+    }
+
+    /**
+     *
+     * @param icon icon
+     * @param label label
+     * @param menu menu
+     * @return ExtendPopupLayout
+     */
+    public ExtendPopupLayout addExtendPopupLayout(int icon, String label, int menu) {
+        ExtendPopupLayout mExtendPopupLayout = new ExtendPopupLayout(mContext);
+        mExtendPopupLayout.setLabel(label);
+        mExtendPopupLayout.setMenu(menu);
+        mExtendPopupLayout.setIcon(icon);
+        mExtendPopupLayout.setIconButton(R.drawable.next_gray);
+        mExtendPopupLayout.setLabelColor(mDefaultContentTextColor);
+        mExtendPopupLayout.setContentColor(mDefaultLabelTextColor);
+        mExtendPopupLayout.setColorSeparator(mDefaultSeparatorColor);
+        mExtendPopupLayout.setTextSize(mDefaultTextSize);
+
+        identifyObject();
+        addField(mExtendPopupLayout);
+
+        return mExtendPopupLayout;
+    }
+
+    /**
+     *
+     * @param icon icon
+     * @param label label
+     * @param menu menu
+     * @param iconButton iconButton
+     * @return ExtendPopupLayout
+     */
+    public ExtendPopupLayout addExtendPopupLayout(int icon, int label, int menu, int iconButton) {
+        ExtendPopupLayout mExtendPopupLayout = new ExtendPopupLayout(mContext);
+        mExtendPopupLayout.setLabel(label);
+        mExtendPopupLayout.setIcon(icon);
+        mExtendPopupLayout.setIconButton(iconButton);
+        mExtendPopupLayout.setMenu(menu);
+        mExtendPopupLayout.setLabelColor(mDefaultContentTextColor);
+        mExtendPopupLayout.setContentColor(mDefaultLabelTextColor);
+        mExtendPopupLayout.setColorSeparator(mDefaultSeparatorColor);
+        mExtendPopupLayout.setTextSize(mDefaultTextSize);
+
+        identifyObject();
+        addField(mExtendPopupLayout);
+
+        return mExtendPopupLayout;
+    }
+
+    /**
+     *
+     * @param icon icon
+     * @param label label
+     * @param content content
+     * @param menu menu
+     * @param iconButton iconButton
+     * @return ExtendPopupLayout
+     */
+    public ExtendPopupLayout addExtendPopupLayout(int icon, int label, String content, ArrayList<String> menu, int iconButton) {
+        ExtendPopupLayout mExtendPopupLayout = new ExtendPopupLayout(mContext);
+        mExtendPopupLayout.setLabel(label);
+        mExtendPopupLayout.setContent(content);
+        mExtendPopupLayout.setIcon(icon);
+        mExtendPopupLayout.setIconButton(iconButton);
+        mExtendPopupLayout.setCustomMenu(menu);
+        mExtendPopupLayout.setLabelColor(mDefaultContentTextColor);
+        mExtendPopupLayout.setContentColor(mDefaultLabelTextColor);
+        mExtendPopupLayout.setColorSeparator(mDefaultSeparatorColor);
+        mExtendPopupLayout.setTextSize(mDefaultTextSize);
+
+        identifyObject();
+        addField(mExtendPopupLayout);
+
+        return mExtendPopupLayout;
+    }
+
+    /**
+     *
+     * @param icon icon
+     * @param label label
+     * @param menu menu
+     * @return ExtendPopupLayout
+     */
+    public ExtendPopupLayout addExtendPopupLayout(int icon, int label, ArrayList<String> menu) {
+        ExtendPopupLayout mExtendPopupLayout = new ExtendPopupLayout(mContext);
+        mExtendPopupLayout.setLabel(label);
+        mExtendPopupLayout.setIcon(icon);
+        mExtendPopupLayout.setCustomMenu(menu);
+        mExtendPopupLayout.setIconButton(R.drawable.next_gray);
+        mExtendPopupLayout.setLabelColor(mDefaultContentTextColor);
+        mExtendPopupLayout.setContentColor(mDefaultLabelTextColor);
+        mExtendPopupLayout.setColorSeparator(mDefaultSeparatorColor);
+        mExtendPopupLayout.setTextSize(mDefaultTextSize);
+
+        identifyObject();
+        addField(mExtendPopupLayout);
+
+        return mExtendPopupLayout;
+    }
+
+    /**
+     *
+     * @param icon icon
+     * @param label label
+     * @param menu menu
+     * @param iconButton iconButton
+     * @return ExtendPopupLayout
+     */
+    public ExtendPopupLayout addExtendPopupLayout(int icon, int label, ArrayList<String> menu, int iconButton) {
+        ExtendPopupLayout mExtendPopupLayout = new ExtendPopupLayout(mContext);
+        mExtendPopupLayout.setLabel(label);
+        mExtendPopupLayout.setIcon(icon);
+        mExtendPopupLayout.setIconButton(iconButton);
+        mExtendPopupLayout.setCustomMenu(menu);
+        mExtendPopupLayout.setLabelColor(mDefaultContentTextColor);
+        mExtendPopupLayout.setContentColor(mDefaultLabelTextColor);
+        mExtendPopupLayout.setColorSeparator(mDefaultSeparatorColor);
+        mExtendPopupLayout.setTextSize(mDefaultTextSize);
+
+        identifyObject();
+        addField(mExtendPopupLayout);
+
+        return mExtendPopupLayout;
+    }
+
+    /**-------------------------------------------------------------------------*/
     /**------------------------GROUP LAYOUT-------------------------------------*/
 
 
@@ -1420,6 +1625,8 @@ public class PanelLayout extends LinearLayout {
             ((ExtendEditTextLayout) getLastField()).showSeparator();
         } else if (getLastField() instanceof ExtendValidatorTextLayout) {
             ((ExtendValidatorTextLayout) getLastField()).showSeparator();
+        } else if (getLastField() instanceof ExtendTextLayout) {
+            ((ExtendTextLayout) getLastField()).showSeparator();
         }
     }
 

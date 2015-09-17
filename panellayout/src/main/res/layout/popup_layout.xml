@@ -51,6 +51,7 @@
             android:layout_height="@dimen/size_icon"
             android:layout_gravity="center"
             android:gravity="center"
+            android:padding="2dp"
             android:layout_marginRight="8dp"/>
     </LinearLayout>
 

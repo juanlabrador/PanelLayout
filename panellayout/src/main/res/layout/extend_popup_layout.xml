@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_vertical">
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="bottom"
+            android:layout_marginTop="@dimen/padding_internal_top">
+
+            <ImageView
+                android:layout_width="@dimen/size_icon"
+                android:layout_height="5dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginLeft="12dp"/>
+            
+            <TextView
+                android:id="@+id/extend_text_label"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="left|center_vertical"
+                android:layout_marginLeft="@dimen/padding_internal_left"
+                android:layout_marginRight="@dimen/padding_right"
+                android:ellipsize="marquee"
+                android:singleLine="true"
+                android:scrollHorizontally="true"/>
+            
+        </LinearLayout>
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="top"
+            android:layout_marginBottom="@dimen/padding_internal_bottom">
+            
+            <ImageView
+                android:id="@+id/icon"
+                android:layout_width="@dimen/size_icon"
+                android:layout_height="@dimen/size_icon"
+                android:gravity="center"
+                android:adjustViewBounds="true"
+                android:layout_marginLeft="12dp"/>
+
+            <TextView
+                android:id="@+id/extend_content_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="left|center_vertical"
+                android:layout_marginLeft="@dimen/padding_internal_left"
+                android:layout_marginRight="@dimen/padding_right"
+                android:singleLine="true"
+                android:scrollHorizontally="true"/>
+    
+            <ImageView
+                android:id="@+id/icon_one_button"
+                android:layout_width="@dimen/size_icon"
+                android:layout_height="@dimen/size_icon"
+                android:gravity="center"
+                android:padding="2dp"
+                android:adjustViewBounds="true"
+                android:layout_marginRight="8dp"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <include 
+        android:id="@+id/separator" 
+        layout="@layout/separator" 
+        android:layout_marginLeft="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"/>
+
+</LinearLayout>
