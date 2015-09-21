@@ -6,7 +6,7 @@ A group of view in container to style iOS 7. For API 19+
 How to use
 ----------
 ```groovy
-compile 'com.github.juanlabrador:panellayout:2.1.2@aar'
+compile 'com.github.juanlabrador:panellayout:2.1.3@aar'
 ```
 
 In your xml
@@ -289,6 +289,9 @@ You can use values String or Text. Add a menu of res, or String[] or ArrayList<S
 ```
 Log
 ----
+V2.1.3
+- Minor changes PopupLayout and ExtendPopupLayout
+
 v2.1.2
 - Added getItemTitle by position in PopupLayout
 
