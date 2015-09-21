@@ -79,7 +79,7 @@
                 android:adjustViewBounds="true"
                 android:layout_marginRight="8dp"/>
 
-            <com.pnikosis.materialishprogress.ProgressWheel
+            <com.github.juanlabrador.panellayout.progressbar.ProgressWheel
                 android:id="@+id/progress"
                 android:layout_width="@dimen/size_icon"
                 android:layout_height="@dimen/size_icon"

@@ -1,7 +1,6 @@
 package com.github.juanlabrador.panellayout;
 
 import android.content.Context;
-import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.graphics.Point;
 import android.graphics.Rect;
@@ -19,10 +18,10 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.PopupWindow;
-import android.widget.ProgressBar;
 import android.widget.TextView;
 
-import com.pnikosis.materialishprogress.ProgressWheel;
+import com.github.juanlabrador.panellayout.progressbar.ProgressWheel;
+
 
 /**
  * Created by juanlabrador on 16/09/15.

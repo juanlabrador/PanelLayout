@@ -20,7 +20,7 @@ import android.widget.LinearLayout;
 import android.widget.PopupWindow;
 import android.widget.TextView;
 
-import com.pnikosis.materialishprogress.ProgressWheel;
+import com.github.juanlabrador.panellayout.progressbar.ProgressWheel;
 
 /**
  * Created by juanlabrador on 16/09/15.
