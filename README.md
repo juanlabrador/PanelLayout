@@ -6,7 +6,7 @@ A group of view in container to style iOS 7. For API 19+
 How to use
 ----------
 ```groovy
-compile 'com.github.juanlabrador:panellayout:2.1.3@aar'
+compile 'com.github.juanlabrador:panellayout:2.2@aar'
 ```
 
 In your xml
@@ -148,6 +148,17 @@ You can use values String or Text. Add a menu of res, or String[] or ArrayList<S
   mPanelLayout.addPopupLayout("Age", age);  // With ArrayList
   mPanelLayout.addPopupLayout("Gender", R.menu.menu_main, R.drawable.youricon);
 ```
+It's important that when you create a menu res, add tag "orderInCategory" starting from 0, because with this, you can detect the position of item.
+```xml
+  <menu
+      xmlns:android="http://schemas.android.com/apk/res/android">
+      <item android:title="Male"
+          android:orderInCategory="0"/>
+
+      <item android:title="Female"
+          android:orderInCategory="1"/>
+  </menu>
+```
 Add ButtonLayout
 ----------------
 ![ButtonLayout](screen/ButtonLayout.png)
@@ -287,8 +298,26 @@ You can use values String or Text. Add a menu of res, or String[] or ArrayList<S
   mPanelLayout.addExtendPopupLayout(R.mipmap.gender, "Gender", gender); // With ArrayList
   mPanelLayout.addExtendPopupLayout(R.mipmap.gender, "Gender", R.menu.menu_main, R.drawable.youricon);
 ```
+It's important that when you create a menu res, add tag "orderInCategory" starting from 0, because with this, you can detect the position of item.
+```xml
+  <menu
+      xmlns:android="http://schemas.android.com/apk/res/android">
+      <item android:title="Male"
+          android:orderInCategory="0"/>
+
+      <item android:title="Female"
+          android:orderInCategory="1"/>
+  </menu>
+```
 Log
 ----
+v2.2
+- Added ExtendButtonLayout
+- Added ExtendMultiTextLayout
+
+v2.1.4
+- Fix bug PopupLayout and ExtendPopupLayout
+
 V2.1.3
 - Minor changes PopupLayout and ExtendPopupLayout
 
