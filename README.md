@@ -6,7 +6,7 @@ A group of view in container to style iOS 7. For API 19+
 How to use
 ----------
 ```groovy
-compile 'com.github.juanlabrador:panellayout:2.2@aar'
+compile 'com.github.juanlabrador:panellayout:2.2.2@aar'
 ```
 
 In your xml
@@ -311,6 +311,14 @@ It's important that when you create a menu res, add tag "orderInCategory" starti
 ```
 Log
 ----
+v2.2.2
+- Added TextChangedListener on MultiTextLayout and ExtendMultiTextLayout
+- Added InputType on ValidatorLayout and ExtendValidatorLayout
+
+v2.2.1
+- Change size icon
+- PopupLayout and ButtonLayout, all container has OnClick.
+
 v2.2
 - Added ExtendButtonLayout
 - Added ExtendMultiTextLayout
