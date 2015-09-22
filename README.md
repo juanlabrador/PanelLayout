@@ -384,9 +384,8 @@ Inspiration in
 
 <a href="https://github.com/vladexologija/GroupedTextView">GroupedTextView</a>
 
-
-Credits
+Libraries used in this project
 -------
-- For <a href="https://github.com/kyleduo/SwitchButton">SwitchButton</a>
-- For <a href="https://github.com/pnikosis/materialish-progress">materialish-progress</a>
+- <a href="https://github.com/kyleduo/SwitchButton">SwitchButton</a>
+- <a href="https://github.com/pnikosis/materialish-progress">materialish-progress</a>
 
