@@ -54,7 +54,7 @@
                 android:layout_marginLeft="12dp"/>
     
             <EditText
-                android:id="@+id/vertical_multi_edittext_content"
+                android:id="@+id/vertical_multi_edit_text_content"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"

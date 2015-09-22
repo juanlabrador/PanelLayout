@@ -13,6 +13,7 @@ import android.widget.TextView;
  */
 public class ButtonLayout extends LinearLayout {
 
+    private View mView;
     private LayoutInflater mInflater;
     private TextView mLabel;
     private TextView mContent;
@@ -66,16 +67,14 @@ public class ButtonLayout extends LinearLayout {
         mButton.setImageResource(image);
     }
 
-    public ImageView getButton() {
-        return mButton;
 
-    }
     public void showSeparator(){
         mSeparator.setVisibility(View.VISIBLE);
     }
 
     private void initialize() {
         mInflater.inflate(R.layout.button_layout, this);
+        mView = findViewById(R.id.button_layout);
         mLabel = (TextView) findViewById(R.id.button_label);
         mContent = (TextView) findViewById(R.id.button_content);
         mButton = (ImageView) findViewById(R.id.button);
@@ -93,6 +92,6 @@ public class ButtonLayout extends LinearLayout {
     }
 
     public void setOnClickListener(OnClickListener o) {
-        mButton.setOnClickListener(o);
+        mView.setOnClickListener(o);
     }
 }

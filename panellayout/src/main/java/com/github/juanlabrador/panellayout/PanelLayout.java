@@ -1585,6 +1585,107 @@ public class PanelLayout extends LinearLayout {
     }
 
     /**-------------------------------------------------------------------------*/
+    /**------------------------EXTEND BUTTON LAYOUT-------------------------------------*/
+
+    /**
+     *
+     * @param icon icon
+     * @param label label
+     * @param content content
+     * @param iconButton button
+     * @return ExtendButtonLayout
+     */
+    public ExtendButtonLayout addExtendButtonLayout(int icon, int label, String content, int iconButton) {
+        ExtendButtonLayout mExtendButtonLayout = new ExtendButtonLayout(mContext);
+        mExtendButtonLayout.setLabel(label);
+        mExtendButtonLayout.setContent(content);
+        mExtendButtonLayout.setIcon(icon);
+        mExtendButtonLayout.setIconButton(iconButton);
+        mExtendButtonLayout.setLabelColor(mDefaultContentTextColor);
+        mExtendButtonLayout.setContentColor(mDefaultLabelTextColor);
+        mExtendButtonLayout.setColorSeparator(mDefaultSeparatorColor);
+        mExtendButtonLayout.setTextSize(mDefaultTextSize);
+
+        identifyObject();
+        addField(mExtendButtonLayout);
+
+        return mExtendButtonLayout;
+    }
+
+    /**
+     *
+     * @param icon icon
+     * @param label label
+     * @param iconButton button
+     * @return ExtendButtonLayout
+     */
+    public ExtendButtonLayout addExtendButtonLayout(int icon, int label, int iconButton) {
+        ExtendButtonLayout mExtendButtonLayout = new ExtendButtonLayout(mContext);
+        mExtendButtonLayout.setLabel(label);
+        mExtendButtonLayout.setIcon(icon);
+        mExtendButtonLayout.setIconButton(iconButton);
+        mExtendButtonLayout.setLabelColor(mDefaultContentTextColor);
+        mExtendButtonLayout.setContentColor(mDefaultLabelTextColor);
+        mExtendButtonLayout.setColorSeparator(mDefaultSeparatorColor);
+        mExtendButtonLayout.setTextSize(mDefaultTextSize);
+
+        identifyObject();
+        addField(mExtendButtonLayout);
+
+        return mExtendButtonLayout;
+    }
+
+
+    /**-------------------------------------------------------------------------*/
+    /**------------------------EXTEND MULTI TEXT LAYOUT-------------------------------------*/
+
+    public ExtendMultiEditTextLayout addExtendMultiEditTextLayout(int icon, String label) {
+        ExtendMultiEditTextLayout mExtendMultiEditTextLayout = new ExtendMultiEditTextLayout(mContext);
+        mExtendMultiEditTextLayout.setLabel(label);
+        mExtendMultiEditTextLayout.setIcon(icon);
+        mExtendMultiEditTextLayout.setLabelColor(mDefaultContentTextColor);
+        mExtendMultiEditTextLayout.setContentColor(mDefaultLabelTextColor);
+        mExtendMultiEditTextLayout.setColorSeparator(mDefaultSeparatorColor);
+        mExtendMultiEditTextLayout.setTextSize(mDefaultTextSize);
+
+        identifyObject();
+        addField(mExtendMultiEditTextLayout);
+
+        return mExtendMultiEditTextLayout;
+    }
+
+    public ExtendMultiEditTextLayout addExtendMultiEditTextLayout(int icon, int label) {
+        ExtendMultiEditTextLayout mExtendMultiEditTextLayout = new ExtendMultiEditTextLayout(mContext);
+        mExtendMultiEditTextLayout.setLabel(label);
+        mExtendMultiEditTextLayout.setIcon(icon);
+        mExtendMultiEditTextLayout.setLabelColor(mDefaultContentTextColor);
+        mExtendMultiEditTextLayout.setContentColor(mDefaultLabelTextColor);
+        mExtendMultiEditTextLayout.setColorSeparator(mDefaultSeparatorColor);
+        mExtendMultiEditTextLayout.setTextSize(mDefaultTextSize);
+
+        identifyObject();
+        addField(mExtendMultiEditTextLayout);
+
+        return mExtendMultiEditTextLayout;
+    }
+
+    public ExtendMultiEditTextLayout addExtendMultiEditTextLayout(int icon, int label, String content) {
+        ExtendMultiEditTextLayout mExtendMultiEditTextLayout = new ExtendMultiEditTextLayout(mContext);
+        mExtendMultiEditTextLayout.setLabel(label);
+        mExtendMultiEditTextLayout.setIcon(icon);
+        mExtendMultiEditTextLayout.setContent(content);
+        mExtendMultiEditTextLayout.setLabelColor(mDefaultContentTextColor);
+        mExtendMultiEditTextLayout.setContentColor(mDefaultLabelTextColor);
+        mExtendMultiEditTextLayout.setColorSeparator(mDefaultSeparatorColor);
+        mExtendMultiEditTextLayout.setTextSize(mDefaultTextSize);
+
+        identifyObject();
+        addField(mExtendMultiEditTextLayout);
+
+        return mExtendMultiEditTextLayout;
+    }
+
+    /**-------------------------------------------------------------------------*/
     /**------------------------GROUP LAYOUT-------------------------------------*/
 
 
@@ -1625,8 +1726,12 @@ public class PanelLayout extends LinearLayout {
             ((ExtendEditTextLayout) getLastField()).showSeparator();
         } else if (getLastField() instanceof ExtendValidatorTextLayout) {
             ((ExtendValidatorTextLayout) getLastField()).showSeparator();
-        } else if (getLastField() instanceof ExtendTextLayout) {
-            ((ExtendTextLayout) getLastField()).showSeparator();
+        } else if (getLastField() instanceof ExtendButtonLayout) {
+            ((ExtendButtonLayout) getLastField()).showSeparator();
+        } else if (getLastField() instanceof ExtendMultiEditTextLayout) {
+            ((ExtendMultiEditTextLayout) getLastField()).showSeparator();
+        } else if (getLastField() instanceof ExtendPopupLayout) {
+            ((ExtendPopupLayout) getLastField()).showSeparator();
         }
     }
 

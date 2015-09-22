@@ -24,7 +24,6 @@ import com.github.juanlabrador.panellayout.R;
  * Todd Davies' Progress Wheel https://github.com/Todd-Davies/ProgressWheel
  *
  * @author Nico Hormazábal
- *         <p/>
  *         Licensed under the Apache License 2.0 license see:
  *         http://www.apache.org/licenses/LICENSE-2.0
  */
@@ -157,7 +156,7 @@ public class ProgressWheel extends View {
 
   /**
    * Use onSizeChanged instead of onAttachedToWindow to get the dimensions of the view,
-   * because this method is called after measuring the dimensions of MATCH_PARENT & WRAP_CONTENT.
+   * because this method is called after measuring the dimensions of MATCH_PARENT and WRAP_CONTENT.
    * Use this dimensions to setup the bounds and paints.
    */
   @Override protected void onSizeChanged(int w, int h, int oldw, int oldh) {

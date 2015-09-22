@@ -9,7 +9,7 @@
     <dimen name="padding_internal_right">5dp</dimen>
     <dimen name="padding_internal_top">5dp</dimen>
     <dimen name="padding_internal_bottom">5dp</dimen>
-    <dimen name="size_icon">22dp</dimen>
+    <dimen name="size_icon">24dp</dimen>
     
     <dimen name="padding_internal_vertical">1dp</dimen>
 

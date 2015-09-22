@@ -3,16 +3,20 @@ package com.github.juanlabrador.panellayout;
 import android.content.Context;
 import android.os.Build;
 import android.util.TypedValue;
+import android.view.ContextMenu;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.PopupMenu;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by juanlabrador on 16/09/15.
@@ -20,7 +24,7 @@ import java.util.ArrayList;
 public class PopupLayout extends LinearLayout implements View.OnClickListener, PopupMenu.OnMenuItemClickListener {
 
     private static String TAG = "PopupLayout";
-
+    private View mView;
     private Context mContext;
     private LayoutInflater mInflater;
     private TextView mLabel;
@@ -28,7 +32,8 @@ public class PopupLayout extends LinearLayout implements View.OnClickListener, P
     private ImageView mButton;
     private View mSeparator;
     private PopupMenu mPopup;
-    private int mMenu;
+    private int mMenu = 0;
+    private List<String> mMenuPos;
 
     // Custom menu
     private ArrayList<String> mCustomMenu;
@@ -75,22 +80,26 @@ public class PopupLayout extends LinearLayout implements View.OnClickListener, P
 
     public void setMenu(int menu) {
         mMenu = menu;
+        showPopupMenu(mMenu);
     }
 
     public void setCustomMenu(ArrayList<String> customMenu) {
         mCustomMenu = customMenu;
+        showPopupCustomMenu(mCustomMenu);
     }
 
     public void setCustomMenu(String[] customMenu) {
         mCustomMenu2 = customMenu;
+        showPopupCustomMenu(mCustomMenu2);
     }
 
     private void initialize() {
         mInflater.inflate(R.layout.popup_layout, this);
+        mView = findViewById(R.id.popup_layout);
         mLabel = (TextView) findViewById(R.id.popup_label);
         mContent = (TextView) findViewById(R.id.popup_content);
         mButton = (ImageView) findViewById(R.id.popup_button);
-        mButton.setOnClickListener(this);
+        mView.setOnClickListener(this);
         mSeparator = findViewById(R.id.separator);
         mSeparator.setVisibility(View.GONE);
     }
@@ -107,9 +116,19 @@ public class PopupLayout extends LinearLayout implements View.OnClickListener, P
     @Override
     public boolean onMenuItemClick(MenuItem menuItem) {
         mContent.setText(menuItem.getTitle().toString());
-        mItemPosition = menuItem.getOrder();
+        mItemPosition = findItemPosition(menuItem);  // If is custom menu
+        if (mItemPosition == -1) // If is menu res
+            mItemPosition = menuItem.getOrder();
         mItemTitle = menuItem.getTitle().toString();
         return true;
+    }
+
+    public String getItemTitle(int position) {
+        if (mPopup != null) {
+            mItemTitle = (String) mPopup.getMenu().getItem(position).getTitle();
+            return mItemTitle;
+        }
+        return null;
     }
 
     /**
@@ -211,5 +230,58 @@ public class PopupLayout extends LinearLayout implements View.OnClickListener, P
         }
         mPopup.setOnMenuItemClickListener(this);
         mPopup.show();
+    }
+
+    /**
+     * Show popup menu with resource
+     * @param menu
+     */
+    private void showPopupMenu(int menu) {
+        mPopup = new PopupMenu(mContext, null);
+        mPopup.getMenuInflater().inflate(menu, mPopup.getMenu());
+    }
+
+    /**
+     * Show popup menu with ArrayList
+     * @param menu
+     */
+    private void showPopupCustomMenu(ArrayList<String> menu) {
+        mMenuPos = new ArrayList<>();
+        mPopup = new PopupMenu(mContext, null);
+        mPopup.getMenu().clear();
+        for (int i = 0; i < menu.size(); i++) {
+            mPopup.getMenu().add(0, 0, i, menu.get(i));
+            mMenuPos.add(mPopup.getMenu().getItem(i).getTitle().toString());
+        }
+    }
+
+    /**
+     * Show popup menu with String[] array
+     * @param menu
+     */
+    private void showPopupCustomMenu(String[] menu) {
+        mMenuPos = new ArrayList<>();
+        mPopup = new PopupMenu(mContext, null);
+        mPopup.getMenu().clear();
+        for (int i = 0; i < menu.length; i++) {
+            mPopup.getMenu().add(0, 0, i, menu[i]);
+            mMenuPos.add(mPopup.getMenu().getItem(i).getTitle().toString());
+        }
+    }
+
+    /**
+     * Detected position for custom menu
+     * @param item menuItem
+     * @return position
+     */
+    private int findItemPosition(MenuItem item) {
+        if (mMenuPos != null) {
+            for (int i = 0; i < mMenuPos.size(); i++) {
+                if (mMenuPos.get(i).equals(item.getItemId())) {
+                    return i;
+                }
+            }
+        }
+        return -1;
     }
 }
