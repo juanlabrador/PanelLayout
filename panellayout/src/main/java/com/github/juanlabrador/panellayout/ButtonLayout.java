@@ -1,6 +1,8 @@
 package com.github.juanlabrador.panellayout;
 
 import android.content.Context;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,11 +10,14 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.github.juanlabrador.panellayout.interfaces.OnEmptyContentListener;
+
 /**
  * Created by juanlabrador on 16/09/15.
  */
 public class ButtonLayout extends LinearLayout {
 
+    private OnEmptyContentListener onEmptyContentListener = null;
     private View mView;
     private LayoutInflater mInflater;
     private TextView mLabel;
@@ -80,6 +85,8 @@ public class ButtonLayout extends LinearLayout {
         mButton = (ImageView) findViewById(R.id.button);
         mSeparator = findViewById(R.id.separator);
         mSeparator.setVisibility(View.GONE);
+
+        dataChanged();
     }
 
     @Override
@@ -93,5 +100,45 @@ public class ButtonLayout extends LinearLayout {
 
     public void setOnClickListener(OnClickListener o) {
         mView.setOnClickListener(o);
+    }
+
+    public int hashCode() {
+        return mContent.hashCode();
+    }
+
+    /**
+     * Listener for know if content is empty or not
+     * @param listener onChangeContentListener
+     */
+    public void setOnEmptyContentListener(OnEmptyContentListener listener) {
+        onEmptyContentListener = listener;
+    }
+
+
+    private void dataChanged() {
+        mContent.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+                if (!getContent().isEmpty()) {
+                    if (onEmptyContentListener != null) {
+                        onEmptyContentListener.isContentEmpty(mContent.hashCode(), false);
+                    }
+                } else {
+                    if (onEmptyContentListener != null) {
+                        onEmptyContentListener.isContentEmpty(mContent.hashCode(), true);
+                    }
+                }
+            }
+        });
     }
 }

@@ -1,7 +1,9 @@
 package com.github.juanlabrador.panellayout;
 
 import android.content.Context;
+import android.text.Editable;
 import android.text.InputFilter;
+import android.text.TextWatcher;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,11 +12,14 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.github.juanlabrador.panellayout.interfaces.OnChangedContentListener;
+
 /**
  * Created by juanlabrador on 21/09/15.
  */
 public class ExtendMultiEditTextLayout extends LinearLayout {
 
+    private OnChangedContentListener onChangedContentListener = null;
     private LayoutInflater mInflater;
     private TextView mLabel;
     private EditText mContent;
@@ -81,6 +86,8 @@ public class ExtendMultiEditTextLayout extends LinearLayout {
         mIcon = (ImageView) findViewById(R.id.icon);
         mSeparator = findViewById(R.id.separator);
         mSeparator.setVisibility(View.GONE);
+
+        dataChanged();
     }
 
     public String getContent() {
@@ -98,5 +105,41 @@ public class ExtendMultiEditTextLayout extends LinearLayout {
         } else {
             return true;
         }
+    }
+
+    /**
+     *
+     * @return num
+     */
+    public int hashCode() {
+        return mContent.hashCode();
+    }
+
+    /**
+     * Listener when text type is changed
+     * @param listener
+     */
+    public void setOnChangedContentListener(OnChangedContentListener listener) {
+        onChangedContentListener = listener;
+    }
+    private void dataChanged() {
+        mContent.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+                if (onChangedContentListener != null) {
+                    onChangedContentListener.afterTextChanged(editable);
+                }
+            }
+        });
     }
 }

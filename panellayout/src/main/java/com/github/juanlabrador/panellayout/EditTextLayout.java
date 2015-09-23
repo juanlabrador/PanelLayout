@@ -13,11 +13,14 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.github.juanlabrador.panellayout.interfaces.OnChangedContentListener;
+
 /**
  * Created by juanlabrador on 15/09/15.
  */
 public class EditTextLayout extends LinearLayout implements View.OnFocusChangeListener {
 
+    private OnChangedContentListener onChangedContentListener = null;
     private LayoutInflater mInflater;
     private TextView mLabel;
     private EditText mContent;
@@ -79,6 +82,8 @@ public class EditTextLayout extends LinearLayout implements View.OnFocusChangeLi
         mContent.setOnFocusChangeListener(this);
         mSeparator = findViewById(R.id.separator);
         mSeparator.setVisibility(View.GONE);
+
+        dataChanged();
     }
 
     public String getContent() {
@@ -113,14 +118,6 @@ public class EditTextLayout extends LinearLayout implements View.OnFocusChangeLi
             mContent.setInputType(InputType.TYPE_CLASS_TEXT);
     }
 
-    public EditText getEditText() {
-        return mContent;
-    }
-
-    public void addTextChangedListener(TextWatcher textWatcher) {
-        mContent.addTextChangedListener(textWatcher);
-    }
-
     @Override
     public boolean equals(Object o) {
         if (!(o instanceof EditTextLayout)){
@@ -139,4 +136,39 @@ public class EditTextLayout extends LinearLayout implements View.OnFocusChangeLi
         }
     }
 
+    /**
+     *
+     * @return num
+     */
+    public int hashCode() {
+        return mContent.hashCode();
+    }
+
+    /**
+     * Listener when text type is changed
+     * @param listener
+     */
+    public void setOnChangedContentListener(OnChangedContentListener listener) {
+        onChangedContentListener = listener;
+    }
+    private void dataChanged() {
+        mContent.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+                if (onChangedContentListener != null) {
+                    onChangedContentListener.afterTextChanged(editable);
+                }
+            }
+        });
+    }
 }

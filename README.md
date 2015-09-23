@@ -6,7 +6,7 @@ A group of view in container to style iOS 7. For API 19+
 How to use
 ----------
 ```groovy
-compile 'com.github.juanlabrador:panellayout:2.2.2@aar'
+compile 'com.github.juanlabrador:panellayout:2.2.3@aar'
 ```
 
 In your xml
@@ -214,28 +214,18 @@ You can use values String or Text. Use it to validate a search.
 
 ```java
   final ValidatorTextLayout mValidator = mPanelLayout2.addValidatorLayout("Email");
-  mValidator.addTextChangedListener(new TextWatcher() {
-      @Override
-      public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
+  mValidator.setOnChangedContentListener(new OnChangedContentListener() {
+    @Override
+    public void afterTextChanged(Editable editable) {
+        if (Condition correct) {
+            mValidator.dataCheck();
+        } else if (Condition error) {
+            mValidator.dataError();
+        } else {
+            mValidator.dataProgress();
+        }
       }
-
-      @Override
-      public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
-      }
-
-      @Override
-      public void afterTextChanged(Editable editable) {
-          if (Condition correct) {
-              mValidator.dataCheck();
-          } else if (Condition error) {
-              mValidator.dataError();
-          } else {
-              mValidator.dataProgress();
-          }
-      }
-  });
+});
 ```
 Add ExtendTextLayout
 --------------------
@@ -258,28 +248,18 @@ Add ExtendValidatorTextLayout
 
 ```java
   final ExtendValidatorTextLayout mValidator = mPanelLayout.addExtendValidatorLayout(R.mipmap.message, "Email");
-  mValidator.addTextChangedListener(new TextWatcher() {
-      @Override
-      public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
-      }
-
-      @Override
-      public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
-      }
-
-      @Override
-      public void afterTextChanged(Editable editable) {
-          if (mValidator.getContent().equals("juan@email.com")) {
-              mValidator.dataCheck();
-          } else if (mValidator.getContent().equals("juan@dd.e")) {
-              mValidator.dataError();
-          } else {
-              mValidator.dataProgress();
+  mValidator.setOnChangedContentListener(new OnChangedContentListener() {
+        @Override
+        public void afterTextChanged(Editable editable) {
+              if (mValidator.getContent().equals("juan@email.com")) {
+                  mValidator.dataCheck();
+              } else if (mValidator.getContent().equals("juan@dd.e")) {
+                  mValidator.dataError();
+              } else {
+                  mValidator.dataProgress();
+              }
           }
-      }
-  });
+    });
 ```
 Add ExtendPopupLayout
 ---------------
@@ -311,6 +291,10 @@ It's important that when you create a menu res, add tag "orderInCategory" starti
 ```
 Log
 ----
+v2.2.3
+- Added OnEmptyContentListener
+- Added OnChangedContentListener
+
 v2.2.2
 - Added TextChangedListener on MultiTextLayout and ExtendMultiTextLayout
 - Added InputType on ValidatorLayout and ExtendValidatorLayout

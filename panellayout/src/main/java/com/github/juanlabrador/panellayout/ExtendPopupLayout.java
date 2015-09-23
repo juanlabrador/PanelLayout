@@ -2,6 +2,8 @@ package com.github.juanlabrador.panellayout;
 
 import android.content.Context;
 import android.os.Build;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.util.TypedValue;
 import android.view.Gravity;
@@ -12,7 +14,8 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.PopupMenu;
 import android.widget.TextView;
-import android.widget.Toast;
+
+import com.github.juanlabrador.panellayout.interfaces.OnEmptyContentListener;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,6 +26,7 @@ import java.util.List;
 public class ExtendPopupLayout extends LinearLayout implements View.OnClickListener, PopupMenu.OnMenuItemClickListener {
 
     private static String TAG = "PopupLayout";
+    private OnEmptyContentListener onEmptyContentListener = null;
     private View mView;
     private Context mContext;
     private LayoutInflater mInflater;
@@ -107,6 +111,8 @@ public class ExtendPopupLayout extends LinearLayout implements View.OnClickListe
         mView.setOnClickListener(this);
         mSeparator = findViewById(R.id.separator);
         mSeparator.setVisibility(View.GONE);
+
+        dataChange();
     }
 
     @Override
@@ -271,5 +277,47 @@ public class ExtendPopupLayout extends LinearLayout implements View.OnClickListe
             }
         }
         return -1;
+    }
+
+    public int hashCode() {
+        return mContent.hashCode();
+    }
+
+    /**
+     * Listener for know if content is empty or not
+     * @param listener onChangeContentListener
+     */
+    public void setOnEmptyContentListener(OnEmptyContentListener listener) {
+        onEmptyContentListener = listener;
+    }
+
+
+    private void dataChange() {
+        mContent.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+                if (!getContent().isEmpty()) {
+                    if (!getContent().isEmpty()) {
+                        if (onEmptyContentListener != null) {
+                            onEmptyContentListener.isContentEmpty(mContent.hashCode(), false);
+                        }
+                    } else {
+                        if (onEmptyContentListener != null) {
+                            onEmptyContentListener.isContentEmpty(mContent.hashCode(), true);
+                        }
+                    }
+                }
+            }
+        });
     }
 }

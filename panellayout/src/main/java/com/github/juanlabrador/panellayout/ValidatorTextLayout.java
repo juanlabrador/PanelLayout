@@ -5,7 +5,9 @@ import android.graphics.Color;
 import android.graphics.Point;
 import android.graphics.Rect;
 import android.graphics.drawable.ColorDrawable;
+import android.text.Editable;
 import android.text.InputFilter;
+import android.text.InputType;
 import android.text.TextWatcher;
 import android.util.Log;
 import android.util.TypedValue;
@@ -20,6 +22,7 @@ import android.widget.LinearLayout;
 import android.widget.PopupWindow;
 import android.widget.TextView;
 
+import com.github.juanlabrador.panellayout.interfaces.OnChangedContentListener;
 import com.github.juanlabrador.panellayout.progressbar.ProgressWheel;
 
 
@@ -28,6 +31,7 @@ import com.github.juanlabrador.panellayout.progressbar.ProgressWheel;
  */
 public class ValidatorTextLayout extends LinearLayout implements View.OnFocusChangeListener {
 
+    private OnChangedContentListener onChangedContentListener = null;
     private final WindowManager mWindowManager;
     private View mItem;
     private LayoutInflater mInflater;
@@ -106,10 +110,6 @@ public class ValidatorTextLayout extends LinearLayout implements View.OnFocusCha
         return mContent;
     }
 
-    public void addTextChangedListener(TextWatcher textWatcher) {
-        mContent.addTextChangedListener(textWatcher);
-    }
-
     public void changeColorProgress(int color) {
         mProgress.setBarColor(color);
     }
@@ -123,6 +123,8 @@ public class ValidatorTextLayout extends LinearLayout implements View.OnFocusCha
         mProgress = (ProgressWheel) mItem.findViewById(R.id.progress);
         mSeparator = mItem.findViewById(R.id.separator);
         mSeparator.setVisibility(View.GONE);
+
+        dataChanged();
     }
 
     public void dataRetry(OnClickListener onClickListener) {
@@ -158,6 +160,34 @@ public class ValidatorTextLayout extends LinearLayout implements View.OnFocusCha
         mIconValidate.setImageResource(R.drawable.error);
         mState = false;
         displayPopupWindow(mIconValidate, message);
+    }
+
+    public void isPassword(boolean b) {
+        if (b)
+            mContent.setInputType(InputType.TYPE_CLASS_TEXT|InputType.TYPE_TEXT_VARIATION_PASSWORD);
+        else
+            mContent.setInputType(InputType.TYPE_CLASS_TEXT);
+    }
+
+    public void isNumber(boolean b) {
+        if (b)
+            mContent.setInputType(InputType.TYPE_CLASS_NUMBER);
+        else
+            mContent.setInputType(InputType.TYPE_CLASS_TEXT);
+    }
+
+    public void isEmail(boolean b) {
+        if (b)
+            mContent.setInputType(InputType.TYPE_TEXT_VARIATION_EMAIL_ADDRESS);
+        else
+            mContent.setInputType(InputType.TYPE_CLASS_TEXT);
+    }
+
+    public void isURL(boolean b) {
+        if (b)
+            mContent.setInputType(InputType.TYPE_TEXT_VARIATION_WEB_EDIT_TEXT);
+        else
+            mContent.setInputType(InputType.TYPE_CLASS_TEXT);
     }
 
     public boolean isCheck() {
@@ -249,5 +279,41 @@ public class ValidatorTextLayout extends LinearLayout implements View.OnFocusCha
         } else {
             mContent.setGravity(Gravity.LEFT | Gravity.CENTER_VERTICAL);
         }
+    }
+
+    /**
+     *
+     * @return num
+     */
+    public int hashCode() {
+        return mContent.hashCode();
+    }
+
+    /**
+     * Listener when text type is changed
+     * @param listener
+     */
+    public void setOnChangedContentListener(OnChangedContentListener listener) {
+        onChangedContentListener = listener;
+    }
+    private void dataChanged() {
+        mContent.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+                if (onChangedContentListener != null) {
+                    onChangedContentListener.afterTextChanged(editable);
+                }
+            }
+        });
     }
 }

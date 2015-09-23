@@ -1,6 +1,7 @@
 package com.github.juanlabrador.panellayout;
 
 import android.content.Context;
+import android.text.Editable;
 import android.text.InputFilter;
 import android.text.InputType;
 import android.text.TextWatcher;
@@ -12,11 +13,14 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.github.juanlabrador.panellayout.interfaces.OnChangedContentListener;
+
 /**
  * Created by juanlabrador on 16/09/15.
  */
 public class ExtendEditTextLayout extends LinearLayout {
 
+    private OnChangedContentListener onChangedContentListener = null;
     private LayoutInflater mInflater;
     private TextView mLabel;
     private EditText mContent;
@@ -104,10 +108,6 @@ public class ExtendEditTextLayout extends LinearLayout {
             mContent.setInputType(InputType.TYPE_CLASS_TEXT);
     }
 
-    public void addTextChangedListener(TextWatcher textWatcher) {
-        mContent.addTextChangedListener(textWatcher);
-    }
-
     private void initialize() {
         mInflater.inflate(R.layout.extend_edit_text_layout, this);
         mLabel = (TextView) findViewById(R.id.extend_text_label);
@@ -115,14 +115,12 @@ public class ExtendEditTextLayout extends LinearLayout {
         mIcon = (ImageView) findViewById(R.id.icon);
         mSeparator = findViewById(R.id.separator);
         mSeparator.setVisibility(View.GONE);
+
+        dataChanged();
     }
 
     public String getContent() {
         return mContent.getText().toString();
-    }
-
-    public EditText getEditText() {
-        return mContent;
     }
 
     @Override
@@ -132,5 +130,41 @@ public class ExtendEditTextLayout extends LinearLayout {
         } else {
             return true;
         }
+    }
+
+    /**
+     *
+     * @return num
+     */
+    public int hashCode() {
+        return mContent.hashCode();
+    }
+
+    /**
+     * Listener when text type is changed
+     * @param listener
+     */
+    public void setOnChangedContentListener(OnChangedContentListener listener) {
+        onChangedContentListener = listener;
+    }
+    private void dataChanged() {
+        mContent.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+                if (onChangedContentListener != null) {
+                    onChangedContentListener.afterTextChanged(editable);
+                }
+            }
+        });
     }
 }
