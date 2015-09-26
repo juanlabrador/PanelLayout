@@ -6,7 +6,7 @@ A group of view in container to style iOS 7. For API 19+
 How to use
 ----------
 ```groovy
-compile 'com.github.juanlabrador:panellayout:2.2.3@aar'
+compile 'com.github.juanlabrador:panellayout:2.4@aar'
 ```
 
 In your xml
@@ -289,8 +289,23 @@ It's important that when you create a menu res, add tag "orderInCategory" starti
           android:orderInCategory="1"/>
   </menu>
 ```
+Add IconSwitchLayout
+----------------
+![IconSwitchLayout](screen/IconSwitchLayout.png)
+
+```java
+  mPanelLayout.addIconSwitchLayout(R.mipmap.facebook, "Facebook");
+  IconSwitchLayout mSwitch = mPanelLayout.addIconSwitchLayout(R.mipmap.twitter, "Twitter");
+  ...
+  ...
+  mSwitch.isChecked();
+  mSwitch.setChecked(true);
+```
 Log
 ----
+v2.4
+- Added IconSwitchLayout
+
 v2.2.3
 - Added OnEmptyContentListener
 - Added OnChangedContentListener

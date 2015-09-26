@@ -3,6 +3,7 @@ package com.github.juanlabrador.panellayout;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.graphics.drawable.GradientDrawable;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
@@ -1686,6 +1687,89 @@ public class PanelLayout extends LinearLayout {
     }
 
     /**-------------------------------------------------------------------------*/
+    /**------------------------ICON SWITCH LAYOUT-------------------------------------*/
+
+    /**
+     *
+     * @param label label
+     * @return SwitchLayout
+     */
+    public IconSwitchLayout addIconSwitchLayout(int icon, String label) {
+        IconSwitchLayout mIconSwitchLayout = new IconSwitchLayout(mContext);
+        mIconSwitchLayout.setLabel(label);
+        mIconSwitchLayout.setIcon(icon);
+        mIconSwitchLayout.setLabelColor(mDefaultLabelTextColor);
+        mIconSwitchLayout.setColorSeparator(mDefaultSeparatorColor);
+        mIconSwitchLayout.setLabelSize(mDefaultTextSize);
+        mIconSwitchLayout.setSwitchColor(Color.parseColor("#43D95D"));
+
+        identifyObject();
+        addField(mIconSwitchLayout);
+
+        return mIconSwitchLayout;
+    }
+
+    /**
+     *
+     * @param label label
+     * @return SwitchLayout
+     */
+    public IconSwitchLayout addIconSwitchLayout(int icon, int label) {
+        IconSwitchLayout mIconSwitchLayout = new IconSwitchLayout(mContext);
+        mIconSwitchLayout.setLabel(label);
+        mIconSwitchLayout.setIcon(icon);
+        mIconSwitchLayout.setLabelColor(mDefaultLabelTextColor);
+        mIconSwitchLayout.setColorSeparator(mDefaultSeparatorColor);
+        mIconSwitchLayout.setLabelSize(mDefaultTextSize);
+        mIconSwitchLayout.setSwitchColor(Color.parseColor("#43D95D"));
+
+        identifyObject();
+        addField(mIconSwitchLayout);
+
+        return mIconSwitchLayout;
+    }
+
+    /**
+     *
+     * @param label label
+     * @return SwitchLayout
+     */
+    public IconSwitchLayout addIconSwitchLayout(Drawable icon, String label) {
+        IconSwitchLayout mIconSwitchLayout = new IconSwitchLayout(mContext);
+        mIconSwitchLayout.setLabel(label);
+        mIconSwitchLayout.setIcon(icon);
+        mIconSwitchLayout.setLabelColor(mDefaultLabelTextColor);
+        mIconSwitchLayout.setColorSeparator(mDefaultSeparatorColor);
+        mIconSwitchLayout.setLabelSize(mDefaultTextSize);
+        mIconSwitchLayout.setSwitchColor(Color.parseColor("#43D95D"));
+
+        identifyObject();
+        addField(mIconSwitchLayout);
+
+        return mIconSwitchLayout;
+    }
+
+    /**
+     *
+     * @param label label
+     * @return SwitchLayout
+     */
+    public IconSwitchLayout addIconSwitchLayout(Drawable icon, int label) {
+        IconSwitchLayout mIconSwitchLayout = new IconSwitchLayout(mContext);
+        mIconSwitchLayout.setLabel(label);
+        mIconSwitchLayout.setIcon(icon);
+        mIconSwitchLayout.setLabelColor(mDefaultLabelTextColor);
+        mIconSwitchLayout.setColorSeparator(mDefaultSeparatorColor);
+        mIconSwitchLayout.setLabelSize(mDefaultTextSize);
+        mIconSwitchLayout.setSwitchColor(Color.parseColor("#43D95D"));
+
+        identifyObject();
+        addField(mIconSwitchLayout);
+
+        return mIconSwitchLayout;
+    }
+
+    /**-------------------------------------------------------------------------*/
     /**------------------------GROUP LAYOUT-------------------------------------*/
 
 
@@ -1732,6 +1816,8 @@ public class PanelLayout extends LinearLayout {
             ((ExtendMultiEditTextLayout) getLastField()).showSeparator();
         } else if (getLastField() instanceof ExtendPopupLayout) {
             ((ExtendPopupLayout) getLastField()).showSeparator();
+        } else if (getLastField() instanceof IconSwitchLayout) {
+            ((IconSwitchLayout) getLastField()).showSeparator();
         }
     }
 
