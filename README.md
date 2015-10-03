@@ -6,7 +6,7 @@ A group of view in container to style iOS 7. For API 19+
 How to use
 ----------
 ```groovy
-compile 'com.github.juanlabrador:panellayout:2.4@aar'
+compile 'com.github.juanlabrador:panellayout:2.4.6@aar'
 ```
 
 In your xml
@@ -303,6 +303,9 @@ Add IconSwitchLayout
 ```
 Log
 ----
+v2.4.6
+- Updated Listener
+
 v2.4
 - Added IconSwitchLayout
 
