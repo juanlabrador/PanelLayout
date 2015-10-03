@@ -53,6 +53,14 @@ public class SwitchLayout extends LinearLayout {
         mSwitch.setConfiguration(mConfiguration);
     }
 
+    public CompoundButton getCompoundButton() {
+        return mSwitch;
+    }
+
+    public void changeChecked(boolean checked) {
+        mSwitch.changeChecked(checked);
+    }
+
     public void setChecked(boolean checked) {
         mSwitch.setChecked(checked);
     }
@@ -61,7 +69,7 @@ public class SwitchLayout extends LinearLayout {
         return mSwitch.isChecked();
     }
 
-    public void onCheckedChangeListener(CompoundButton.OnCheckedChangeListener o) {
+    public void setOnCheckedChangeListener(CompoundButton.OnCheckedChangeListener o) {
         mSwitch.setOnCheckedChangeListener(o);
     }
 

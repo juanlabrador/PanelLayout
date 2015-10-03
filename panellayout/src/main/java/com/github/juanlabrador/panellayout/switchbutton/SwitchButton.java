@@ -424,6 +424,17 @@ public class SwitchButton extends CompoundButton {
         }
     }
 
+    public void changeChecked(boolean checked) {
+        if (mThumbZone != null) {
+            moveThumb(checked ? getMeasuredWidth() : -getMeasuredWidth());
+        }
+        if (mIsChecked == checked) {
+            return;
+        }
+        mIsChecked = checked;
+        refreshDrawableState();
+    }
+
     @Override
     public void setChecked(final boolean checked) {
         setChecked(checked, true);
@@ -488,7 +499,7 @@ public class SwitchButton extends CompoundButton {
         mIsChecked = checked;
         refreshDrawableState();
         if (mOnCheckedChangeListener != null && trigger) {
-            mOnCheckedChangeListener.onCheckedChanged(this, mIsChecked);
+           mOnCheckedChangeListener.onCheckedChanged(this, mIsChecked);
         }
     }
 

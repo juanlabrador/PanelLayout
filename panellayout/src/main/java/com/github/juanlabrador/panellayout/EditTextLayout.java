@@ -150,7 +150,9 @@ public class EditTextLayout extends LinearLayout implements View.OnFocusChangeLi
      */
     public void setOnChangedContentListener(OnChangedContentListener listener) {
         onChangedContentListener = listener;
+        dataChanged();
     }
+
     private void dataChanged() {
         mContent.addTextChangedListener(new TextWatcher() {
             @Override
@@ -166,7 +168,7 @@ public class EditTextLayout extends LinearLayout implements View.OnFocusChangeLi
             @Override
             public void afterTextChanged(Editable editable) {
                 if (onChangedContentListener != null) {
-                    onChangedContentListener.afterTextChanged(editable);
+                    onChangedContentListener.textChanged(editable);
                 }
             }
         });

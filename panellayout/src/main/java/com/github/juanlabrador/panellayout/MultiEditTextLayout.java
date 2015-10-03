@@ -106,7 +106,9 @@ public class MultiEditTextLayout extends LinearLayout {
      */
     public void setOnChangedContentListener(OnChangedContentListener listener) {
         onChangedContentListener = listener;
+        dataChanged();
     }
+
     private void dataChanged() {
         mContent.addTextChangedListener(new TextWatcher() {
             @Override
@@ -122,7 +124,7 @@ public class MultiEditTextLayout extends LinearLayout {
             @Override
             public void afterTextChanged(Editable editable) {
                 if (onChangedContentListener != null) {
-                    onChangedContentListener.afterTextChanged(editable);
+                    onChangedContentListener.textChanged(editable);
                 }
             }
         });

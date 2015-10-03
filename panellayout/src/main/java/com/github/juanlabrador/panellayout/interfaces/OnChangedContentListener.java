@@ -7,5 +7,5 @@ import android.text.Editable;
  */
 public interface OnChangedContentListener {
 
-    public abstract void afterTextChanged(Editable editable);
+    public abstract void textChanged(Editable editable);
 }
