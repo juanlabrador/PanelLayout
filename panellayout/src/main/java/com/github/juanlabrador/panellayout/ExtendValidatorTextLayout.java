@@ -39,6 +39,7 @@ public class ExtendValidatorTextLayout extends LinearLayout {
     private TextView mLabel;
     private ImageView mIcon;
     private ImageView mIconValidate;
+    private TextView mMessage;
     private View mSeparator;
     private boolean mState = false;
     private ProgressWheel mProgress;
@@ -125,6 +126,7 @@ public class ExtendValidatorTextLayout extends LinearLayout {
         mIcon = (ImageView) mItem.findViewById(R.id.icon);
         mIconValidate = (ImageView) mItem.findViewById(R.id.icon_extend_edit_text_validator);
         mProgress = (ProgressWheel) mItem.findViewById(R.id.progress);
+        mMessage = (TextView) mItem.findViewById(R.id.message);
         mSeparator = mItem.findViewById(R.id.separator);
         mSeparator.setVisibility(View.GONE);
 
@@ -182,7 +184,10 @@ public class ExtendValidatorTextLayout extends LinearLayout {
         mIconValidate.setVisibility(VISIBLE);
         mIconValidate.setImageResource(R.drawable.error);
         mState = false;
-        displayPopupWindow(mIconValidate, getResources().getString(message));
+        mMessage.setText(message);
+        mMessage.setTextSize(TypedValue.COMPLEX_UNIT_PX, (mTextSize - 6));
+        mMessage.setVisibility(VISIBLE);
+        //displayPopupWindow(mIconValidate, getResources().getString(message));
     }
 
     public void dataError(String message) {
@@ -191,7 +196,10 @@ public class ExtendValidatorTextLayout extends LinearLayout {
         mIconValidate.setVisibility(VISIBLE);
         mIconValidate.setImageResource(R.drawable.error);
         mState = false;
-        displayPopupWindow(mIconValidate, message);
+        mMessage.setText(message);
+        mMessage.setTextSize(TypedValue.COMPLEX_UNIT_PX, (mTextSize - 6));
+        mMessage.setVisibility(VISIBLE);
+        //displayPopupWindow(mIconValidate, message);
     }
 
     public boolean isCheck() {
@@ -199,10 +207,11 @@ public class ExtendValidatorTextLayout extends LinearLayout {
     }
 
     public void dataCheck() {
-        if (mPopupWindow != null) {
+        /*if (mPopupWindow != null) {
             mMessageError.setVisibility(GONE);
             mPopupWindow.dismiss();
-        }
+        }*/
+        mMessage.setVisibility(GONE);
         mProgress.cancelLongPress();
         mProgress.setVisibility(GONE);
         mIconValidate.setVisibility(VISIBLE);
@@ -211,10 +220,11 @@ public class ExtendValidatorTextLayout extends LinearLayout {
     }
 
     public void dataProgress() {
-        if (mPopupWindow != null) {
+        /*if (mPopupWindow != null) {
             mMessageError.setVisibility(GONE);
             mPopupWindow.dismiss();
-        }
+        }*/
+        mMessage.setVisibility(GONE);
         mIconValidate.setVisibility(GONE);
         mProgress.setVisibility(VISIBLE);
     }

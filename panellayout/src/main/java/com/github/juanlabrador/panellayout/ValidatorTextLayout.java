@@ -40,6 +40,7 @@ public class ValidatorTextLayout extends LinearLayout implements View.OnFocusCha
     private TextView mLabel;
     private ImageView mIconValidate;
     private View mSeparator;
+    private TextView mMessage;
     private boolean mState = false;
     private ProgressWheel mProgress;
     private Context mContext;
@@ -121,6 +122,7 @@ public class ValidatorTextLayout extends LinearLayout implements View.OnFocusCha
         mContent.setOnFocusChangeListener(this);
         mIconValidate = (ImageView) mItem.findViewById(R.id.validator_icon);
         mProgress = (ProgressWheel) mItem.findViewById(R.id.progress);
+        mMessage = (TextView) mItem.findViewById(R.id.message);
         mSeparator = mItem.findViewById(R.id.separator);
         mSeparator.setVisibility(View.GONE);
 
@@ -150,7 +152,10 @@ public class ValidatorTextLayout extends LinearLayout implements View.OnFocusCha
         mIconValidate.setVisibility(VISIBLE);
         mIconValidate.setImageResource(R.drawable.error);
         mState = false;
-        displayPopupWindow(mIconValidate, getResources().getString(message));
+        mMessage.setText(message);
+        mMessage.setTextSize(TypedValue.COMPLEX_UNIT_PX, (mTextSize - 6));
+        mMessage.setVisibility(VISIBLE);
+        //displayPopupWindow(mIconValidate, getResources().getString(message));
     }
 
     public void dataError(String message) {
@@ -159,7 +164,10 @@ public class ValidatorTextLayout extends LinearLayout implements View.OnFocusCha
         mIconValidate.setVisibility(VISIBLE);
         mIconValidate.setImageResource(R.drawable.error);
         mState = false;
-        displayPopupWindow(mIconValidate, message);
+        mMessage.setText(message);
+        mMessage.setTextSize(TypedValue.COMPLEX_UNIT_PX, (mTextSize - 6));
+        mMessage.setVisibility(VISIBLE);
+        //displayPopupWindow(mIconValidate, getResources().getString(message));
     }
 
     public void isPassword(boolean b) {
@@ -195,10 +203,11 @@ public class ValidatorTextLayout extends LinearLayout implements View.OnFocusCha
     }
 
     public void dataCheck() {
-        if (mPopupWindow != null) {
+        /*if (mPopupWindow != null) {
             mMessageError.setVisibility(GONE);
             mPopupWindow.dismiss();
-        }
+        }*/
+        mMessage.setVisibility(GONE);
         mProgress.cancelLongPress();
         mProgress.setVisibility(GONE);
         mIconValidate.setVisibility(VISIBLE);
@@ -207,10 +216,11 @@ public class ValidatorTextLayout extends LinearLayout implements View.OnFocusCha
     }
 
     public void dataProgress() {
-        if (mPopupWindow != null) {
+        /*if (mPopupWindow != null) {
             mMessageError.setVisibility(GONE);
             mPopupWindow.dismiss();
-        }
+        }*/
+        mMessage.setVisibility(GONE);
         mIconValidate.setVisibility(GONE);
         mProgress.setVisibility(VISIBLE);
     }

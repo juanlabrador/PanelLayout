@@ -11,7 +11,7 @@
     <dimen name="padding_internal_bottom">5dp</dimen>
     <dimen name="size_icon">24dp</dimen>
 
-    <dimen name="size_icon_big">28dp</dimen>
+    <dimen name="size_icon_big">32dp</dimen>
 
 
     
