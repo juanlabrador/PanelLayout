@@ -211,7 +211,7 @@ public class ValidatorTextLayout extends LinearLayout implements View.OnFocusCha
         mProgress.cancelLongPress();
         mProgress.setVisibility(GONE);
         mIconValidate.setVisibility(VISIBLE);
-        mIconValidate.setImageResource(R.drawable.check);
+        mIconValidate.setImageResource(R.drawable.ok);
         mState = true;
     }
 

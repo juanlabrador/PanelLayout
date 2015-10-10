@@ -5,23 +5,25 @@ import android.content.res.TypedArray;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.GradientDrawable;
+import android.support.v7.widget.CardView;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 
 import java.util.ArrayList;
 
 /**
  * Created by juanlabrador on 15/09/15.
  */
-public class PanelLayout extends LinearLayout {
+public class PanelLayout extends RelativeLayout {
 
     private static String TAG = "GroupLayout";
     private Context mContext;
     private TypedArray mTypedArray;
     private LayoutInflater mLayoutInflater;
-    private LinearLayout mGroupContent;
+    private CardView mGroupContent;
     private LinearLayout mItemContent;
 
     // Background Attributes
@@ -30,7 +32,8 @@ public class PanelLayout extends LinearLayout {
     private int mDefaultBackgroundColor = Color.WHITE;
     private int mDefaultSeparatorColor = Color.LTGRAY;
     private boolean mDefaultBorder = true;
-    private int mDefaultCornerRadius = 12;
+    private int mDefaultCornerRadius = 4;
+    private int mDefaultElevation = 4;
 
     // Text Attributes
 
@@ -53,7 +56,7 @@ public class PanelLayout extends LinearLayout {
     private void initialize() {
         mLayoutInflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         mLayoutInflater.inflate(R.layout.panel_layout, this);
-        mGroupContent = (LinearLayout) findViewById(R.id.group_layout);
+        mGroupContent = (CardView) findViewById(R.id.group_layout);
         mItemContent = (LinearLayout) findViewById(R.id.item_layout);
         mItemContent.setVisibility(View.GONE);
     }
@@ -75,6 +78,10 @@ public class PanelLayout extends LinearLayout {
         mDefaultTextSize = attrsArray.getDimensionPixelSize(R.styleable.GroupLayoutAttrs_textSizeLayout,
                 getResources().getDimensionPixelSize(R.dimen.size_text));
 
+        mDefaultCornerRadius = attrsArray.getDimensionPixelSize(R.styleable.GroupLayoutAttrs_panelRadius, 4);
+
+        mDefaultElevation = attrsArray.getDimensionPixelSize(R.styleable.GroupLayoutAttrs_panelElevation, 4);
+
 
         setBackgroundColor();
         setBackgroundBorderColor();
@@ -85,10 +92,10 @@ public class PanelLayout extends LinearLayout {
         mDrawable.setColor(mDefaultBackgroundColor);
 
         // With border
-        if (mDefaultBorder != false) {
+        /*if (mDefaultBorder != false) {
             mDrawable.setCornerRadius(mDefaultCornerRadius);
-        }
-
+        }*/
+        mDrawable.setCornerRadius(mDefaultCornerRadius);
         mItemContent.setBackground(mDrawable);
     }
 
@@ -97,16 +104,20 @@ public class PanelLayout extends LinearLayout {
         mDrawable.setColor(mDefaultBackgroundBorderColor);
 
         // With border
-        if (mDefaultBorder != false) {
+        /*if (mDefaultBorder != false) {
             mDrawable.setCornerRadius(mDefaultCornerRadius);
             mDrawable.setColor(mDefaultBackgroundBorderColor);
             mGroupContent.setPadding(1, 1, 1, 1);
         } else { // Without border
             mDrawable.setColor(mDefaultBackgroundBorderColor);
             mGroupContent.setPadding(0, 1, 0, 1);
-        }
+        }*/
 
-        mGroupContent.setBackground(mDrawable);
+        mGroupContent.setUseCompatPadding(true);
+        mGroupContent.setPreventCornerOverlap(false);
+        mGroupContent.setRadius(mDefaultCornerRadius);
+        mGroupContent.setCardElevation(mDefaultElevation);
+
     }
 
     /**-------------------------------------------------------------------------------------*/

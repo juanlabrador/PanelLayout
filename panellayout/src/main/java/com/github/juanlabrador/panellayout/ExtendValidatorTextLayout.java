@@ -215,7 +215,7 @@ public class ExtendValidatorTextLayout extends LinearLayout {
         mProgress.cancelLongPress();
         mProgress.setVisibility(GONE);
         mIconValidate.setVisibility(VISIBLE);
-        mIconValidate.setImageResource(R.drawable.check);
+        mIconValidate.setImageResource(R.drawable.ok);
         mState = true;
     }
 

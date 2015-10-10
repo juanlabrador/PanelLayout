@@ -7,7 +7,10 @@
         <attr name="contentTextColor" format="color"/>
         <attr name="separatorColor" format="color"/>
         <attr name="textSizeLayout" format="dimension"/>
+        <attr name="panelRadius" format="dimension"/>
+        <attr name="panelElevation" format="dimension"/>
         <attr name="withBorder" format="boolean"/>
+
     </declare-styleable>
 
     <declare-styleable name="SwitchButton">
