@@ -6,7 +6,7 @@ A group of view in container to style iOS 7. For API 19+
 How to use
 ----------
 ```groovy
-compile 'com.github.juanlabrador:panellayout:2.4.6@aar'
+compile 'com.github.juanlabrador:panellayout:2.6@aar'
 ```
 
 In your xml
@@ -21,13 +21,12 @@ In your xml
 If you want to customize it, applies these attributes supported:
 
 ```xml
-  <attr name="backgroundColor" format="color"/>
-  <attr name="backgroundBorderColor" format="color"/>
   <attr name="labelTextColor" format="color"/>
   <attr name="contentTextColor" format="color"/>
   <attr name="separatorColor" format="color"/>
   <attr name="textSizeLayout" format="dimension"/>
-  <attr name="withBorder" format="boolean"/>
+  <attr name="panelRadius" format="dimension"/>
+  <attr name="panelElevation" format="dimension"/>
 ```
 
 Then, you must add this line to apply them
@@ -45,13 +44,12 @@ Then, you must add this line to apply them
 
 By default:
 
-- BorderBackgroundColor is TRANSPARENT
-- BackgroundColor is WHITE
 - SeparatorColor is LTGRAY
 - LabelTextColor is BLACK
 - ContentTextColor is GRAY
 - TextSizeLayout is 14sp
-- WithBorder is true
+- panelElevation is 4dp
+- panelRadius is 4dp
 
 In your class java
 ------------------
@@ -303,6 +301,9 @@ Add IconSwitchLayout
 ```
 Log
 ----
+v2.6
+- Change View by CardView, add Radius and Elevation
+
 v2.4.6
 - Updated Listener
 
