@@ -61,7 +61,6 @@
                 android:gravity="left|center_vertical"
                 android:layout_marginLeft="@dimen/padding_internal_left"
                 android:layout_marginRight="@dimen/padding_right"
-                android:singleLine="true"
                 android:scrollHorizontally="true"/>
 
         </LinearLayout>

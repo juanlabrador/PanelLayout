@@ -153,6 +153,10 @@ public class ExtendPopupLayout extends LinearLayout implements View.OnClickListe
         return mItemPosition;
     }
 
+    public void setItemPosition(int position) {
+        mItemPosition = position;
+    }
+
     /**
      * Get item select title
      * @return

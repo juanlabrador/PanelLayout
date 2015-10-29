@@ -108,10 +108,15 @@ public class ExtendEditTextLayout extends LinearLayout {
             mContent.setInputType(InputType.TYPE_CLASS_TEXT);
     }
 
+    public void setMultiLine() {
+        mContent.setSingleLine(false);
+    }
+
     private void initialize() {
         mInflater.inflate(R.layout.extend_edit_text_layout, this);
         mLabel = (TextView) findViewById(R.id.extend_text_label);
         mContent = (EditText) findViewById(R.id.extend_edit_text_content);
+        mContent.setSingleLine(true);
         mIcon = (ImageView) findViewById(R.id.icon);
         mSeparator = findViewById(R.id.separator);
         mSeparator.setVisibility(View.GONE);

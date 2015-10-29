@@ -67,6 +67,10 @@ public class ExtendTextLayout extends LinearLayout {
         mSeparator.setBackgroundColor(color);
     }
 
+    public void setMultiLine() {
+        mContent.setSingleLine(false);
+    }
+
     public void setTextSize(float size) {
         mLabel.setTextSize(TypedValue.COMPLEX_UNIT_PX, size);
         mContent.setTextSize(TypedValue.COMPLEX_UNIT_PX, size);
@@ -76,6 +80,7 @@ public class ExtendTextLayout extends LinearLayout {
         mLayoutInflater.inflate(R.layout.extend_text_layout, this);
         mLabel = (TextView) findViewById(R.id.extend_text_label);
         mContent = (TextView) findViewById(R.id.extend_content_text);
+        mContent.setSingleLine(true);
         mIcon = (ImageView) findViewById(R.id.icon);
         mSeparator = findViewById(R.id.separator);
         mSeparator.setVisibility(View.GONE);
